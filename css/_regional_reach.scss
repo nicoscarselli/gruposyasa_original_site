@@ -1,0 +1,33 @@
+.regional-reach-tab {
+  width: 10%;
+  line-height: normal;
+
+  @media screen and (max-width: 768px) {
+    width: 25%;
+  }
+
+  a {
+    text-align: center;
+    border-radius: 0 !important;
+    border-color: white white $header-color white !important;
+
+    &.active {
+      background-color: $header-color !important;
+      color: white !important;
+      border-color: $header-color !important;
+    }
+  }
+}
+
+.regional-reach-tab-content {
+  padding-top: 2rem;
+
+  img {
+    float: left;
+    padding: 0 2rem 2rem 0;
+  }
+}
+
+#regional-reach-tabs {
+  border-bottom: 2px solid $header-color;
+}
