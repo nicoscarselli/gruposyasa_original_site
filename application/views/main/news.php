@@ -4,30 +4,34 @@
  */
 ?>
 
-<section class="container">
-    <div class="row mb-4">
-        <div class="col-12">
-            <h2 class="subtitle"><?= localized('news_main_title'); ?></h2>
-            <span class="separator"></span>
-        </div>
+<!-- ======= Breadcrumbs ======= -->
+<div class="breadcrumbs d-flex align-items-center" style="background-image: url('<?= images_folder('header_noticias.png'); ?>');">
+    <div class="container position-relative d-flex flex-column align-items-center">
+           <h2><?= localized('news_main_title'); ?></h2>
     </div>
+</div>
+<!-- End Breadcrumbs -->
 
-    <div class="row">
-        <?php foreach ($news as $item): ?>
-            <div class="col-12 col-sm-6 col-md-4 col-lg-3">
-                <div class="news-item">
-                    <div class="image">
-                        <img src="<?= $item->image(); ?>" class="img-fluid" />
-                    </div>
-                    <div class="date"><?= localized('date'); ?>: <?= $item->date; ?></div>
-                    <div class="title"><?= $item->title; ?></div>
-                    <div class="button">
-                        <a href="<?= $item->file(); ?>" target="_blank">
-                            <?= localized('view_pdf'); ?>
-                        </a>
-                    </div>
+<section id="recent-blog-posts" class="recent-blog-posts">
+    <div class="container">
+        <div class="row gy-5">
+            <?php foreach ($news as $item): ?>
+            <div class="col-xl-4 col-md-6">
+            
+            <div class="post-item position-relative h-100">
+                <div class="post-img position-relative overflow-hidden">
+                <img src="<?= $item->image(); ?>" class="img-fluid" />
+                <span class="post-date"><?= localized('date'); ?>: <?= $item->date; ?></span>
+                </div>
+                <div class="post-content d-flex flex-column">
+                <h3 class="post-title"><?= $item->title; ?></h3>
+                <hr>
+                <a href="<?= $item->file(); ?>" class="readmore stretched-link" target="_blank"><?= localized('view_pdf'); ?></a>
                 </div>
             </div>
-        <?php endforeach; ?>
+            
+            </div><!-- End post item -->
+            <?php endforeach; ?>
+        </div>
     </div>
 </section>

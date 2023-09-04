@@ -5,36 +5,110 @@
  */
 ?>
 
-<!-- Description and related -->
-<section class="container">
-	<div class="row">
-		<div class="col-12">
-			<h2 class="subtitle"><?= $project->name; ?></h2>
-			<span class="separator"></span>
-		</div>
-	</div>
+<!-- ======= Breadcrumbs ======= -->
+<div class="breadcrumbs d-flex align-items-center" style="background-image: url('<?= project_files_image($project->id, $project->main_image); ?>');">
+    <div class="container position-relative d-flex flex-column align-items-center">
+           <h2><?= $project->name; ?></h2>
+    </div>
+</div>
+<!-- End Breadcrumbs -->
 
-	<div class="row">
-		<!-- Project description -->
-		<div class="col-12 col-md-10 blue-text">
-			<?= $project->description; ?>
+<!-- Photo gallery -->
+<section class="proyecto-interno">
+
+	<div class="container">
+
+		<!-- Images gallery + Project Info -->
+		<div class="row justify-content-between">
+			<!-- Gallery -->
+			<div class="col-lg-6">
+				<div class="owl-carousel owl-theme photos-gallery">
+					<?php foreach ( $project_media as $media ): ?>
+						<div class="item">
+							<?php if ( is_a($media, Project_image::class) ): ?>
+								<a href="<?= project_files_image($project->id, $media->file); ?>"
+								   data-lightbox="project_images">
+									<img src="<?= project_files_image($project->id, $media->file); ?>"
+										 title="<?= $project->name . '-' . $media->id; ?>"/>
+								</a>
+							<?php else: ?>
+								<video src="<?= project_files_image($project->id, $media->file); ?>" controls
+									   controlsList="nodownload"
+									   style="width: 100%">
+								</video>
+							<?php endif; ?>
+
+						</div>
+					<?php endforeach; ?>
+				</div>
+
+				<!-- Project map -->
+				<div class="map mt-4">
+					<?php if ( !empty($project->address) ): ?>
+						<iframe
+								width="100%"
+								height="450"
+								frameborder="0" style="border:0"
+								src="https://www.google.com/maps/embed/v1/place?key=<?= config_item('google_maps_api_key'); ?>&q=<?= $project->address; ?>"
+								allowfullscreen>
+						</iframe>
+					<?php endif; ?>
+				</div>
+			</div>
+
+			<!-- Info -->
+			<div class="col-lg-5">
+				<!-- Project description -->
+				<div class="mb-4">
+					<?= $project->description; ?>
+				</div>
+
+				<!-- Info -->
+				<div class="project-info-table">
+					<div class="info">
+						<h6><?= localized('project_region_id'); ?></h6>
+						<p><?= $project->localize('region_name'); ?></p>
+					</div>
+					<div class="info">
+						<h6><?= localized('project_client'); ?></h6>
+						<p><?= $project->client; ?></p>
+					</div>
+					<div class="info">
+						<h6><?= localized('project_surface'); ?></h6>
+						<p><?= $project->surface; ?></p>
+					</div>
+					<div class="info">
+						<h6><?= localized('project_date_period'); ?></h6>
+						<p><?= $project->date_period; ?></p>
+					</div>
+					<div class="info">
+						<h6><?= localized('project_service_reach'); ?></h6>
+						<p><?= $project->service_reach; ?></p>
+					</div>
+					<div class="info">
+						<h6><?= localized('project_location'); ?></h6>
+						<p><?= $project->location; ?></p>
+					</div>
+				</div>
+			</div>
 		</div>
 	</div>
 </section>
 
+
 <!-- Related Projects -->
-<section class="container-fluid secondary-section">
+<section class="section-bg-secondary-light">
 	<div class="container">
+
 		<div class="row">
 			<div class="col-12">
-				<h2 class="subtitle"><?= localized('related_projects'); ?></h2>
-				<span class="separator"></span>
+				<h2><?= localized('related_projects'); ?></h2>
 			</div>
 		</div>
 
 		<div class="row">
 			<div class="col-12">
-				<div class="projects-gallery owl-carousel">
+				<div class="owl-theme owl-carousel">
 					<?php foreach ( $related_projects as $related_project ): ?>
 						<?php
 						$project_url = site_url('proyectos/proyecto/' . $related_project->id);
@@ -63,113 +137,6 @@
 					<?php endforeach; ?>
 				</div>
 			</div>
-		</div>
-	</div>
-</section>
-
-<!-- Photo gallery -->
-<section class="container-fluid grey-section">
-	<div class="container">
-		<div class="row">
-			<div class="col-12">
-				<h2 class="subtitle"><?= localized('photo_gallery'); ?></h2>
-				<span class="separator"></span>
-			</div>
-		</div>
-
-		<!-- Images gallery -->
-		<div class="row">
-			<div class="col-12">
-				<div class="photos-gallery owl-carousel">
-					<?php foreach ( $project_media as $media ): ?>
-						<div class="item">
-							<?php if ( is_a($media, Project_image::class) ): ?>
-								<a href="<?= project_files_image($project->id, $media->file); ?>"
-								   data-lightbox="project_images">
-									<img src="<?= project_files_image($project->id, $media->file); ?>"
-										 title="<?= $project->name . '-' . $media->id; ?>"/>
-								</a>
-							<?php else: ?>
-								<video src="<?= project_files_image($project->id, $media->file); ?>" controls
-									   controlsList="nodownload"
-									   style="width: 100%"></video>
-							<?php endif; ?>
-
-						</div>
-					<?php endforeach; ?>
-				</div>
-			</div>
-		</div>
-	</div>
-</section>
-
-<!-- Info table and map -->
-<section class="container">
-	<div class="row">
-		<!-- Project info table -->
-		<div class="col-12 col-md-6">
-			<div class="project-info-table">
-				<div class="row">
-					<div class="title col-12"><?= $project->name; ?></div>
-				</div>
-				<div class="info row">
-					<span class="key col-6"><?= localized('project_region_id'); ?></span>
-					<span class="value col-6"><?= $project->localize('region_name'); ?></span>
-				</div>
-				<div class="info row">
-					<span class="key col-6"><?= localized('project_code'); ?></span>
-					<span class="value col-6"><?= $project->code; ?></span>
-				</div>
-				<div class="info row">
-					<span class="key col-6"><?= localized('project_location'); ?></span>
-					<span class="value col-6"><?= $project->location; ?></span>
-				</div>
-				<div class="info row">
-					<span class="key col-6"><?= localized('project_client'); ?></span>
-					<span class="value col-6"><?= $project->client; ?></span>
-				</div>
-				<div class="info row">
-					<span class="key col-6"><?= localized('project_surface'); ?></span>
-					<span class="value col-6"><?= $project->surface; ?></span>
-				</div>
-				<div class="info row">
-					<span class="key col-6"><?= localized('project_date_period'); ?></span>
-					<span class="value col-6"><?= $project->date_period; ?></span>
-				</div>
-				<div class="info row">
-					<span class="key col-6"><?= localized('project_service_reach'); ?></span>
-					<span class="value col-6"><?= $project->service_reach; ?></span>
-				</div>
-				<div class="info row">
-					<span class="key col-6"><?= localized('project_status'); ?></span>
-					<span class="value col-6"><?= $project->localize('status_name'); ?></span>
-				</div>
-				<span class="info row">
-                    <span class="key col-6"><?= localized('project_timeframe'); ?></span>
-                    <span class="value col-6"><?= $project->timeframe; ?></span>
-                </span>
-				<span class="info row">
-                    <span class="key col-6"><?= localized('project_contracting_system'); ?></span>
-                    <span class="value col-6"><?= $project->contracting_system; ?></span>
-                </span>
-				<span class="info row">
-                    <span class="key col-6"><?= localized('project_address'); ?></span>
-                    <span class="value col-6"><?= $project->address; ?></span>
-                </span>
-			</div>
-		</div>
-
-		<!-- Project map -->
-		<div class="col-12 col-md-6">
-			<?php if ( !empty($project->address) ): ?>
-				<iframe
-						width="100%"
-						height="450"
-						frameborder="0" style="border:0"
-						src="https://www.google.com/maps/embed/v1/place?key=<?= config_item('google_maps_api_key'); ?>&q=<?= $project->address; ?>"
-						allowfullscreen>
-				</iframe>
-			<?php endif; ?>
 		</div>
 	</div>
 </section>

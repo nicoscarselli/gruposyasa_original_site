@@ -49,36 +49,38 @@ function translated($code, $language, $translations) {
     ];
 </script>
 
-<section class="container">
+
+<!-- ======= Breadcrumbs ======= -->
+<div class="breadcrumbs d-flex align-items-center" style="background-image: url('<?= images_folder('header_oportunidades.png'); ?>');">
+    <div class="container position-relative d-flex flex-column align-items-center">
+           <h2><?= localized('job_opps_main_title'); ?></h2>
+    </div>
+</div>
+<!-- End Breadcrumbs -->
+
+<?php if (!empty(validation_errors()) || isset($error)): ?>
     <div class="row">
-        <div class="col-12">
-            <h2 class="subtitle"><?= localized('job_opps_main_title'); ?></h2>
-            <span class="separator"></span>
+        <div class="col alert alert-danger">
+            <?php if (!empty(validation_errors())) echo validation_errors();  ?>
+            <?php if (isset($error)) echo $error; ?>
         </div>
     </div>
+<?php endif; ?>
 
-    <?php if (!empty(validation_errors()) || isset($error)): ?>
-        <div class="row">
-            <div class="col alert alert-danger">
-                <?php if (!empty(validation_errors())) echo validation_errors();  ?>
-                <?php if (isset($error)) echo $error; ?>
-            </div>
-        </div>
-    <?php endif; ?>
+
+<section class="job_opportunities">
+
+    <div class="container">
+
 
     <?php if (!isset($thank_you)): ?>
-        <div class="row">
-            <div class="d-none d-md-flex col-md-6">
-                <img src="<?= images_folder('job_opportunities/jobs.jpg'); ?>" class="img-fluid" style="height: fit-content;"/>
+        <div class="row php-email-form justify-content-center">
+            <div class="col-lg-6">
+                <h2>Completa el formulario para que conozcamos tu experiencias</h2>
             </div>
 
-            <div class="col col-md-6">
+            <div class="col-lg-5">
                 <?= form_open_multipart('', ['id' => 'jobs-form']); ?>
-                <div class="form-group">
-                    <label for="apellido"><?= localized('job_opps_last_name'); ?></label>
-                    <input type="text" name="apellido" id="apellido" class="form-control" value="<?= set_value('apellido'); ?>" />
-                </div>
-
                 <div class="form-group">
                     <label for="nombre"><?= localized('job_opps_first_name'); ?></label>
                     <input type="text" name="nombre" id="nombre" class="form-control" value="<?= set_value('nombre'); ?>" />
@@ -96,20 +98,18 @@ function translated($code, $language, $translations) {
 
                 <div class="form-group">
                     <label for="id_recper_sexo"><?= localized('job_opps_gender'); ?></label>
-                    <div class="form-check">
+                    <select class="form-control" id="id_recper_sexo" name="id_recper_sexo">
                         <?php foreach ($genders as $gender): ?>
-                            <label class="form-check-label">
-                                <input type="radio" id="id_recper_sexo" name="id_recper_sexo"
-                                       value="<?= $gender->id_recper_sexo; ?>" <?= set_radio('id_recper_sexo', $gender->id_recper_sexo, ($gender->id_recper_sexo == 1)); ?> />
+                            <option value="<?= $gender->id_recper_sexo; ?>" <?= set_radio('id_recper_sexo', $gender->id_recper_sexo, ($gender->id_recper_sexo == 1)); ?> />
                                 <?= translated($gender->codigo_traduccion, $language, $translations); ?>
-                            </label>
+                            </option>
                         <?php endforeach; ?>
-                    </div>
+                    </select>
                 </div>
 
                 <div class="form-group">
                     <label for="id_recper_pais"><?= localized('job_opps_country'); ?></label>
-                    <select class="form-control select2" id="id_recper_pais" name="id_recper_pais">
+                    <select class="form-select" id="id_recper_pais" name="id_recper_pais">
                         <?php foreach ($countries as $country): ?>
                             <option value="<?= $country->id_recper_pais; ?>" data-currency-id="<?= $country->id_recper_moneda; ?>" <?= set_select('id_recper_pais', $country->id_recper_pais); ?>>
                                 <?= translated($country->codigo_traduccion, $language, $translations); ?>
@@ -124,29 +124,6 @@ function translated($code, $language, $translations) {
                 </div>
 
                 <div class="form-group">
-                    <label for="ciudad"><?= localized('job_opps_city'); ?></label>
-                    <input type="text" class="form-control" id="ciudad" name="ciudad" value="<?= set_value('ciudad'); ?>" />
-                </div>
-
-                <div class="form-group">
-                    <label for="telefono"><?= localized('job_opps_phone'); ?></label>
-                    <input type="text" class="form-control" id="telefono" name="telefono" value="<?= set_value('telefono'); ?>" />
-                </div>
-
-                <div class="form-group">&nbsp;</div>
-
-                <div class="form-group">
-                    <label for="id_recper_titulo"><?= localized('job_opps_job_title'); ?></label>
-                    <select class="form-control select2" name="id_recper_titulo" id="id_recper_titulo">
-                        <?php foreach ($titles as $title): ?>
-                            <option value="<?= $title->id_recper_titulo; ?>" <?= set_select('id_recper_titulo', $title->id_recper_titulo); ?>>
-                                <?= translated($title->codigo_traduccion, $language, $translations); ?>
-                            </option>
-                        <?php endforeach; ?>
-                    </select>
-                </div>
-
-                <div class="form-group">
                     <label for="id_recper_areatrabajo"><?= localized('job_opps_job_area'); ?></label>
                     <select class="form-control select2" name="id_recper_areatrabajo" id="id_recper_areatrabajo">
                         <?php foreach ($job_areas as $area): ?>
@@ -158,14 +135,9 @@ function translated($code, $language, $translations) {
                 </div>
 
                 <div class="form-group">
-                    <label for="anioexperiencia"><?= localized('job_opps_years_experience'); ?></label>
-                    <input type="text" class="form-control" id="anioexperiencia" name="anioexperiencia" value="<?= set_value('monto', 0); ?>" />
-                </div>
-
-                <div class="form-group">
                     <label for="id_recper_moneda"><?= localized('job_opps_salary'); ?></label>
-                    <div class="form-row">
-                        <div class="col-6 col-md-3">
+                    <div class="row">
+                        <div class="col-lg-3 col-3">
                             <select class="form-control select2" name="id_recper_moneda" id="id_recper_moneda">
                                 <?php foreach ($currencies as $currency): ?>
                                     <option value="<?= $currency->id_recper_moneda; ?>" <?= set_select('id_recper_moneda', $currency->id_recper_moneda); ?>>
@@ -174,47 +146,49 @@ function translated($code, $language, $translations) {
                                 <?php endforeach; ?>
                             </select>
                         </div>
-
-                        <div class="col-6 col-md-9">
+                        <div class="col-lg-9 col-3">
                             <input type="text" class="col form-control" name="monto" id="monto" value="<?= set_value('monto'); ?>" />
                         </div>
                     </div>
                 </div>
 
                 <div class="form-group">
-                    <div class="form-check">
-                        <label class="form-check-label">
-                            <input class="form-check-input" type="checkbox" id="dispext" name="dispext" value="1" />
+                    <label>
+                        <input type="checkbox" id="dispext" name="dispext" value="1" />
                             <?= localized('job_opps_work_abroad'); ?>
-                        </label>
-                    </div>
+                    </label>
                 </div>
 
-                <div class="form-group text-center">
+                <div class="form-group">
                     <div class="cv-button-wrapper">
-                        <button class="btn"><?= localized('job_opps_cv'); ?></button>
+                        <button class="btn btn-secondary"><?= localized('job_opps_cv'); ?></button>
                         <input type="file" name="cv" id="cv" />
                         <span class="info"><?= localized('job_opps_cv_specs'); ?></span>
                     </div>
                 </div>
 
                 <div class="form-group text-center">
-                    <button class="job-opps-submit"><?= localized('job_opps_submit'); ?></button>
+                    <button class="btn btn-primary"><?= localized('job_opps_submit'); ?></button>
                 </div>
 
                 <?= form_close(); ?>
             </div>
+            
         </div>
     <?php else: //$thank_you isset?>
+
         <div class="row">
             <div class="d-none d-md-flex col-md-6">
                 <img src="<?= images_folder('job_opportunities/jobs.jpg'); ?>" class="img-fluid" style="height: fit-content;"/>
             </div>
-
             <div class="col col-md-6">
                 <div class="thank-you-header"><?= localized('job_opps_thank_you_header'); ?></div>
                 <div class="thank-you-text"><?= localized('job_opps_thank_you_text'); ?></div>
             </div>
         </div>
+
     <?php endif; ?>
+
+    </div>
+
 </section>

@@ -34,13 +34,10 @@
 
 
 <!-- Bootstrap -->
-<script type="text/javascript" src="<?= base_url(); ?>components/bootstrap-4.0.0/js/bootstrap.bundle.min.js"></script>
+<script type="text/javascript" src="<?= base_url(); ?>components/bootstrap/js/bootstrap.bundle.min.js"></script>
 
 <!-- Owl Carousel -->
 <script type="text/javascript" src="<?= base_url(); ?>components/owlcarousel2-2.2.1/dist/owl.carousel.min.js"></script>
-
-<!-- MatchHeight -->
-<script type="text/javascript" src="<?= base_url(); ?>components/matchHeight/dist/jquery.matchHeight-min.js"></script>
 
 <!-- SWAL -->
 <script type="text/javascript" src="<?= base_url(); ?>node_modules/sweetalert/dist/sweetalert.min.js"></script>
@@ -70,9 +67,6 @@
 
 <!-- Bootstrap datepicker -->
 <script type="text/javascript" src="<?= base_url(); ?>node_modules/bootstrap-datepicker/dist/js/bootstrap-datepicker.min.js"></script>
-
-<!-- jQuery Match Height -->
-<script src="<?= base_url(); ?>node_modules/jquery-match-height/dist/jquery.matchHeight-min.js"></script>
 
 <!-- Custom -->
 <script type="text/javascript" src="<?= base_url(); ?>js/general.js"></script>
