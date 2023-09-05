@@ -1,7 +1,7 @@
 <?php
 $lang = [
     'home' => 'Inicio',
-    'what_we_do' => 'Nosotros',
+    'about_us' => 'Nosotros',
     'projects' => 'Proyectos',
     'news' => 'Noticias',
     'job_opportunities' => 'Oportunidades Laborales',

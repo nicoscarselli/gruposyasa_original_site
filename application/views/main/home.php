@@ -38,7 +38,7 @@
             <div class="content">
               <h2><?= localized('nosotros_title'); ?></h2>
               <p><?= localized('nosotros_text'); ?></p>
-              <a class="btn btn-primary" href="<?= site_url('nosotros'); ?>"><?= localized('what_we_do');?></a>
+              <a class="btn btn-primary" href="<?= site_url('nosotros'); ?>"><?= localized('about_us');?></a>
             </div>
           </div>
 
@@ -57,7 +57,7 @@
         <div class="section-header justify-content-between justify-content-start mb-5">
           <div class="row">
             <div class="col-lg-6">
-              <h2>Proyectos Destacados</h2>
+              <h2><?= localized('proyectos_main_title'); ?></h2>
             </div>
             <div class="col-lg-6 d-flex justify-content-end">
             <a class="btn btn-primary" href="<?= site_url('proyectos'); ?>"><?= localized('projects'); ?></a>
@@ -133,7 +133,7 @@
       <div class="section-header justify-content-between justify-content-start mb-5">
         <div class="row">
           <div class="col-lg-6">
-            <h2>Actualidad</h2>
+            <h2><?= localized('noticias_main_title'); ?></h2>
           </div>
           <div class="col-lg-6 d-flex justify-content-end">
             <a class="btn btn-primary" href="<?= site_url('noticias'); ?>"><?= localized('news'); ?></a>
@@ -142,22 +142,24 @@
       </div>
 
       <div class="row gy-5">
-        <div class="col-xl-4 col-md-6">
-          <?php foreach ($news as $item): ?>
-          <div class="post-item position-relative h-100">
-            <div class="post-img position-relative overflow-hidden">
-              <img src="<?= $item->image(); ?>" class="img-fluid" />
-              <span><?= localized('date'); ?>: <?= $item->date; ?></span>
-            </div>
-            <div class="post-content d-flex flex-column">
-              <h3 class="post-title"><?= $item->title; ?></h3>
-              <hr>
-              <a href="<?= $item->file(); ?>" class="readmore stretched-link" target="_blank"><?= localized('view_pdf'); ?></a>
-            </div>
+        <div class="owl-carousel owl-theme news">
+            <?php foreach ($news as $item): ?>  
+              <div class="item">
+                <div class="post-item position-relative h-100">
+                    <div class="post-img position-relative overflow-hidden">
+                    <img src="<?= $item->image(); ?>" class="img-fluid" />
+                    <span class="post-date"><?= localized('date'); ?>: <?= $item->date; ?></span>
+                    </div>
+                    <div class="post-content d-flex flex-column">
+                    <h3 class="post-title"><?= $item->title; ?></h3>
+                    <hr>
+                    <a href="<?= $item->file(); ?>" class="readmore stretched-link" target="_blank"><?= localized('view_pdf'); ?></a>
+                    </div>
+                </div>
+              </div>
+            <?php endforeach; ?>
           </div>
-          <?php endforeach; ?>
-        </div><!-- End post item -->
-      </div>
+        </div>
       </div>
     </section>
     <!-- End Recent Blog Posts Section -->
@@ -167,10 +169,10 @@
       <div class="container">
         <div class="row justify-content-between align-items-center">
           <div class="col-lg-6">
-            <h4>Compartinos tu CV completando el formulario a continuación. De esta manera formarás parte de nuestra base de datos para futuras propuestas laborales que se ajusten a tu experiencia y conocimientos.</h4>
+            <h4><?= localized('oportunidades_main_title'); ?></h4>
           </div>
           <div class="col-lg-6 d-flex justify-content-end">
-            <a class="btn btn-primary" href="#">TRABAJA CON NOSOTROS</a>
+            <a class="btn btn-primary" href="<?= site_url('oportunidades_laborales'); ?>"><?= localized('job_opportunities'); ?></a>
           </div>
         </div>
       </div>

@@ -5,13 +5,13 @@ class nosotros extends Syasa_Controller {
     public function __construct() {
         parent::__construct();
 
-        $this->lang->load('what_we_do');
+        $this->lang->load('about_us');
     }
 
     public function index() {
         $view_data = [
-            'view' => 'what_we_do',
-            'title' => localized('what_we_do_page_title') . ' - ' . localized('main_title'),
+            'view' => 'about_us',
+            'title' => localized('about_us_page_title') . ' - ' . localized('main_title'),
             'js' => [
 
             ]

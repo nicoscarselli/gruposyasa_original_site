@@ -7,12 +7,15 @@ class Main extends Syasa_Controller {
 		parent::__construct();
 
 		$this->lang->load('home');
+		$this->load->model('news_model');
+        $this->lang->load('news');
 	}
 
 	public function index() {
 		$view_data = [
-			'view' => 'home',
+			'view' => 'home', 'news',
 			'title' => localized('main_title'),
+			'news' => $this->news_model->get_news(),
 			'js' => [
 				'home.js'
 			]

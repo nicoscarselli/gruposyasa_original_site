@@ -1,7 +1,7 @@
 <section class="container">
     <div class="row">
         <div class="col-12">
-            <h2 class="subtitle"><?= localized('what_we_do_sub_what_we_do'); ?></h2>
+            <h2 class="subtitle"><?= localized('about_us_sub_about_us'); ?></h2>
             <span class="separator"></span>
         </div>
 
@@ -12,8 +12,8 @@
                 </div>
 
                 <div class="col-12 col-md-9">
-                    <div class="section-subtitle blue-text"><?= localized('what_we_do_sub_building_dreams'); ?></div>
-                    <div class="blue-text"><?= localized('what_we_do_building_dreams_content'); ?></div>
+                    <div class="section-subtitle blue-text"><?= localized('about_us_sub_building_dreams'); ?></div>
+                    <div class="blue-text"><?= localized('about_us_building_dreams_content'); ?></div>
                 </div>
             </div>
         </div>
