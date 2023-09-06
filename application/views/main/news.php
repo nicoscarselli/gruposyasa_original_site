@@ -12,7 +12,7 @@
 </div>
 <!-- End Breadcrumbs -->
 
-<section id="recent-blog-posts" class="recent-blog-posts">
+<section id="news-posts" class="news-posts">
     <div class="container">
         <div class="row gy-5">
             <?php foreach ($news as $item): ?>

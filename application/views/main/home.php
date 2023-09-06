@@ -127,7 +127,7 @@
 
     <!-- ======= Recent Blog Posts Section ======= -->
     <?php /** @var News[] $news **/ ?>
-    <section id="recent-blog-posts" class="section-bg-secondary-light recent-blog-posts">
+    <section id="news-posts" class="section-bg-secondary-light news-posts">
       <div class="container">
 
       <div class="section-header justify-content-between justify-content-start mb-5">
