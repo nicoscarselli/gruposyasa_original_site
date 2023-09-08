@@ -7,7 +7,6 @@ class Oportunidades_laborales extends Syasa_Controller {
 
         $this->lang->load('job_opportunities');
         $this->load->model('recper_model');
-
         $this->load->library('form_validation');
     }
 

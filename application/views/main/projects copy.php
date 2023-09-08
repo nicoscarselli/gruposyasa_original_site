@@ -20,7 +20,7 @@
         <?= form_open('', ['id' => 'search-form']); ?>
         <div class="row proyectos">
             <!-- Search bar -->
-            <div class="col-lg-6 col-6">
+            <div class="col-lg-6">
                 <div class="input-group">
                     <input type="text" class="form-control search-control" name="search" id="search" />
                     <span class="input-group-btn">
@@ -33,7 +33,7 @@
             <!-- Search bar -->
 
             <!-- Region switch -->
-            <div class="col-lg-6 col-6">
+            <div class="col-lg-6">
                 <select name="region" id="region" class="form-select">
                     <option value=""><?= localized('location'); ?></option>
                     <option value=""><?= localized('all_locations'); ?></option>

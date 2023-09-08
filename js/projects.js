@@ -1,5 +1,5 @@
 var projects;
-var categories = null;
+var categories;
 var region;
 var search_text;
 

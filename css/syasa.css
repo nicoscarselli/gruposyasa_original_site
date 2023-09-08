@@ -237,6 +237,22 @@ section .videoWrapper iframe {
   font-family: var(--font-secondary);
 }
 
+.breadcrumbs a {
+  font-size: 12px;
+  color: white;
+}
+
+@media (max-width: 768px) {
+  .breadcrumbs {
+    min-height: 30vh;
+    padding: 64px 24px 32px 24px;
+  }
+
+  .breadcrumbs h2 {
+    font-size: 40px;
+  }
+}
+
 /*--------------------------------------------------------------
   # Scroll top button
   --------------------------------------------------------------*/
@@ -324,8 +340,13 @@ section .videoWrapper iframe {
 
 .header .logo img {
   max-height: 64px;
-  margin-right: 8px;
-  margin-left: 24px;
+}
+
+@media screen and (max-width: 1440px) {
+  .header .logo img {
+    max-height: 56px;
+    margin-left: 0;
+  }
 }
 
 @media screen and (max-width: 768px) {
@@ -387,7 +408,7 @@ section .videoWrapper iframe {
 
   .header .langflags {
     background: none;
-    margin-right: 16px;
+    margin-right: 8px;
   }
 }
 
@@ -632,7 +653,7 @@ section .videoWrapper iframe {
 #hero .item-3 {
   position: absolute;
   display: flex;
-  width: 100%;
+  width: 80%;
   height: 100%;
   flex-direction: column;
   align-items: center;
@@ -640,6 +661,9 @@ section .videoWrapper iframe {
   animation-duration: 30s;
   animation-timing-function: ease-in-out;
   animation-iteration-count: infinite;
+  left: 50%;
+  right: 50%;
+  transform: translate(-50%, -6%);
 }
 
 #hero .item-1 {
@@ -713,9 +737,18 @@ section .videoWrapper iframe {
   }
 }
 
-@media (min-width: 1024px) {
+@media (max-width: 1440px) {
   #hero {
     background-attachment: fixed;
+  }
+  #hero h1 {
+    font-size: 48px;
+    line-height: 1;
+    margin: 0 0 24px 0;
+  }
+  #hero h2 {
+    font-size: 24px;
+    line-height: 1;
   }
 }
 
@@ -731,145 +764,6 @@ section .videoWrapper iframe {
 
   #hero h2 {
     font-size: 24px;
-  }
-}
-
-/*--------------------------------------------------------------
-  # Get Started Section
-  --------------------------------------------------------------*/
-.get-started .content {
-  padding: 30px 0;
-}
-
-.get-started .content h3 {
-  font-size: 36px;
-  color: var(--color-secondary);
-  font-weight: 600;
-  margin-bottom: 25px;
-  padding-bottom: 25px;
-  position: relative;
-}
-
-.get-started .content h3:after {
-  content: "";
-  position: absolute;
-  display: block;
-  width: 60px;
-  height: 4px;
-  background: var(--color-primary);
-  left: 0;
-  bottom: 0;
-}
-
-.get-started .content p {
-  font-size: 14px;
-}
-
-.get-started .php-email-form {
-  background: #fff;
-  padding: 30px;
-  height: 100%;
-}
-
-@media (max-width: 575px) {
-  .get-started .php-email-form {
-    padding: 20px;
-  }
-}
-
-.get-started .php-email-form h3 {
-  font-size: 14px;
-  font-weight: 700;
-  text-transform: uppercase;
-  letter-spacing: 1px;
-}
-
-.get-started .php-email-form p {
-  font-size: 14px;
-  margin-bottom: 20px;
-}
-
-.get-started .php-email-form .error-message {
-  display: none;
-  color: #fff;
-  background: #df1529;
-  text-align: left;
-  padding: 15px;
-  margin-bottom: 24px;
-  font-weight: 600;
-}
-
-.get-started .php-email-form .sent-message {
-  display: none;
-  color: #fff;
-  background: #059652;
-  text-align: center;
-  padding: 15px;
-  margin-bottom: 24px;
-  font-weight: 600;
-}
-
-.get-started .php-email-form .loading {
-  display: none;
-  background: #fff;
-  text-align: center;
-  padding: 15px;
-  margin-bottom: 24px;
-}
-
-.get-started .php-email-form .loading:before {
-  content: "";
-  display: inline-block;
-  border-radius: 50%;
-  width: 24px;
-  height: 24px;
-  margin: 0 10px -6px 0;
-  border: 3px solid #059652;
-  border-top-color: #fff;
-  animation: animate-loading 1s linear infinite;
-}
-
-.get-started .php-email-form input,
-.get-started .php-email-form textarea {
-  border-radius: 0;
-  box-shadow: none;
-  font-size: 14px;
-  border-radius: 0;
-}
-
-.get-started .php-email-form input:focus,
-.get-started .php-email-form textarea:focus {
-  border-color: var(--color-primary);
-}
-
-.get-started .php-email-form input {
-  padding: 12px 15px;
-}
-
-.get-started .php-email-form textarea {
-  padding: 12px 15px;
-}
-
-.get-started .php-email-form button[type="submit"] {
-  background: var(--color-primary);
-  border: 0;
-  padding: 10px 30px;
-  color: #fff;
-  transition: 0.4s;
-  border-radius: 4px;
-}
-
-.get-started .php-email-form button[type="submit"]:hover {
-  background: rgba(254, 185, 0, 0.8);
-}
-
-@keyframes animate-loading {
-  0% {
-    transform: rotate(0deg);
-  }
-
-  100% {
-    transform: rotate(360deg);
   }
 }
 
@@ -997,23 +891,24 @@ section .videoWrapper iframe {
 }
 
 .proyectos .portfolio-content .portfolio-info h4 {
-  font-size: 12px;
-  padding: 8px 16px;
-  text-transform: uppercase;
+  background-color: var(--color-primary);
   color: var(--color-primary-light);
   display: inline-block;
-  background-color: var(--color-primary);
+  font-size: 12px;
+  margin-right: 8px;
+  padding: 8px;
+  text-transform: uppercase;
 }
 
 .proyectos .portfolio-content .portfolio-info p {
-  position: absolute;
   bottom: 32px;
-  text-align: center;
-  display: inline-block;
-  left: 0;
-  right: 0;
-  font-size: 20px;
   color: rgba(255, 255, 255, 1);
+  display: inline-block;
+  font-size: 20px;
+  left: 0;
+  position: absolute;
+  right: 0;
+  text-align: center;
 }
 
 .proyectos .portfolio-content .portfolio-info .ver-mas {
@@ -1107,6 +1002,16 @@ section .videoWrapper iframe {
   font-size: 16px;
   color: var(--color-primary);
   font-weight: 700;
+}
+
+@media (max-width: 768px) {
+  .category-checkbox label {
+    font-size: 12px;
+  }
+  .category-checkbox {
+    padding: 6px;
+    margin: 0 4px 4px 0px;
+}
 }
 
 .category-checkbox .form-check-label span {
@@ -1290,12 +1195,6 @@ section .videoWrapper iframe {
 /*--------------------------------------------------------------
   # Recent Blog Posts Section
   --------------------------------------------------------------*/
-.news-posts .post-item {
-  background-color: white;
-  box-shadow: 0px 8px 16px 4px rgba(0, 0, 0, 0.1);
-  transition: 0.3s;
-}
-
 .news-posts .post-item .post-img{
   position: relative;
   overflow: hidden;
@@ -1323,7 +1222,7 @@ section .videoWrapper iframe {
 }
 
 .news-posts .post-item .post-content {
-  padding: 24px;
+  padding: 24px 0;
 }
 
 .news-posts .post-item .post-title {
@@ -1336,8 +1235,8 @@ section .videoWrapper iframe {
 
 .news-posts .post-item hr {
   color: var(--color-secondary-light);
-  border: 2px solid var(--color-secondary-light);
-  margin: 20px 0;
+  border: 1px solid var(--color-default);
+  margin: 16px 0;
 }
 
 .news-posts .post-item .readmore {

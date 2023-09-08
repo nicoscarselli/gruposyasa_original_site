@@ -8,7 +8,7 @@
         </label>
         <ul class="menu__box">
             <li><a class="menu__item" href="<?= site_url(); ?>">Home</a></li>
-            <li><a class="menu__item" href="<?= site_url('nosotros'); ?>"><?= localized('about_us');?></a></li>
+            <li><a class="menu__item" href="#nosotros"><?= localized('about_us');?></a></li>
             <li><a class="menu__item" href="<?= site_url('proyectos'); ?>"><?= localized('projects'); ?></a></li>
             <li><a class="menu__item" href="<?= site_url('noticias'); ?>"><?= localized('news'); ?></a></li>
             <li><a class="menu__item" href="<?= site_url('oportunidades_laborales'); ?>"><?= localized('job_opportunities'); ?></a></li>
@@ -17,7 +17,7 @@
     </div>
     <!-- .Menu -->
     <div class="container-fluid d-flex align-items-center justify-content-between">
-        <a href="index.html" class="logo d-flex align-items-center">
+        <a href="<?= site_url(); ?>" class="logo d-flex align-items-center">
         <img src="<?= images_folder('logos/logo.png'); ?>" alt="" class="logo">
         </a>
         <div>
