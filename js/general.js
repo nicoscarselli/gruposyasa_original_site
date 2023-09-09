@@ -1,9 +1,20 @@
-function no_conection_error() {
-    swal({
-        title: 'Error',
-        icon: 'error',
-        text: 'Parece que no hay conexión a internet'
-    });
+document.addEventListener('DOMContentLoaded', () => {
+  "use strict";
+
+
+/* Preloader */
+const preloader = document.querySelector('#preloader');
+if (preloader) {
+  window.addEventListener('load', () => {
+    preloader.remove();
+  });
+}
+
+/* Animation on scroll function and init */
+function aos_init() {
+  AOS.init({
+    easing: 'ease-in-out-sine'
+  });
 }
 
 /* Scroll top button */
@@ -20,3 +31,17 @@ if (scrollTop) {
   }));
 }
 /* Scroll top button */
+
+
+function no_conection_error() {
+  swal({
+      title: 'Error',
+      icon: 'error',
+      text: 'Parece que no hay conexión a internet'
+  });
+}
+window.addEventListener('load', () => {
+  aos_init();
+});
+
+});

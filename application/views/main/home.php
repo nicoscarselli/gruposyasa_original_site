@@ -32,14 +32,14 @@
 	<section id="nosotros" class="nosotros section-bg-primary-light">
 		<div class="container">
 			<div class="row justify-content-between">
-				<div class="col-lg-4 d-flex align-items-center" >
-					<div class="content">
+				<div class="col-lg-4 d-flex align-items-center">
+					<div class="content" data-aos="fade-up">
 						<h2><?= localized('quienes_somos_title'); ?></h2>
 						<p><?= localized('quienes_somos_text'); ?></p>
 					</div>
 				</div>
 				<div class="col-lg-6">
-					<img src="<?= images_folder('nosotros/nosotros_img_1.png'); ?>" alt="Grupo Syasa" class="img-fluid">
+					<img src="<?= images_folder('nosotros/nosotros_img_1.png'); ?>" alt="Grupo Syasa" class="img-fluid" data-aos="fade-up" data-aos-delay="200">
 				</div>
 			</div>
 		</div>
@@ -50,7 +50,7 @@
 		<div class="container">
 			<div class="row justify-content-center text-center">
 				<div class="col-lg-12 align-items-center" >
-					<h2 class="text-white"><?= localized('que_hacemos_title'); ?></h2>
+					<h2 class="text-white" data-aos="fade-up"><?= localized('que_hacemos_title'); ?></h2>
 				</div>
 			</div>
 		</div>
@@ -138,7 +138,7 @@
 		<div class="container" >
 			<div class="row gy-4">
 				<div class="col-lg-4 col-md-6">
-					<div class="service-item  position-relative">
+					<div class="service-item position-relative" data-aos="fade-up" data-aos-delay="100">
 						<div class="icon">
 							<i class="fa-solid fa-shield-halved"></i>
 						</div>
@@ -148,7 +148,7 @@
 				</div>
 				<!-- End Service Item -->
 				<div class="col-lg-4 col-md-6">
-					<div class="service-item position-relative">
+					<div class="service-item position-relative" data-aos="fade-up" data-aos-delay="200">
 						<div class="icon">
 							<i class="fa-solid fa-medal"></i>
 						</div>
@@ -158,7 +158,7 @@
 				</div>
 				<!-- End Service Item -->
 				<div class="col-lg-4 col-md-6">
-					<div class="service-item position-relative">
+					<div class="service-item position-relative" data-aos="fade-up" data-aos-delay="300">
 						<div class="icon">
 							<i class="fa-solid fa-user-check"></i>
 						</div>
@@ -168,7 +168,7 @@
 				</div>
 				<!-- End Service Item -->
 				<div class="col-lg-4 col-md-6">
-					<div class="service-item position-relative">
+					<div class="service-item position-relative" data-aos="fade-up" data-aos-delay="400">
 						<div class="icon">
 							<i class="fa-solid fa-user-group"></i>
 						</div>
@@ -178,7 +178,7 @@
 				</div>
 				<!-- End Service Item -->
 				<div class="col-lg-4 col-md-6">
-					<div class="service-item position-relative">
+					<div class="service-item position-relative" data-aos="fade-up" data-aos-delay="500">
 						<div class="icon">
 							<i class="fa-solid fa-screwdriver-wrench"></i>
 						</div>
@@ -188,7 +188,7 @@
 				</div>
 				<!-- End Service Item -->
 				<div class="col-lg-4 col-md-6">
-					<div class="service-item position-relative">
+					<div class="service-item position-relative" data-aos="fade-up" data-aos-delay="600">
 						<div class="icon">
 							<i class="fa-solid fa-globe-americas"></i>
 						</div>
@@ -214,9 +214,9 @@
 					</div>
 				</div>
 			</div>
-			<div class="row gy-4 portfolio-container"  >
+			<div class="row gy-4 portfolio-container">
 				<div class="col-lg-4 col-md-6 portfolio-item ">
-					<div class="portfolio-content">
+					<div class="portfolio-content" data-aos="fade-up" data-aos-delay="100">
 						<img src="<?= images_folder('proyectos/parque_lomas.png'); ?>" class="img-fluid" alt="">
 						<div class="portfolio-info">
 							<p>Parque Lomas-Vidalta</p>
@@ -226,7 +226,7 @@
 				</div>
 				<!-- End proyectos Item -->
 				<div class="col-lg-4 col-md-6 portfolio-item">
-					<div class="portfolio-content">
+					<div class="portfolio-content" data-aos="fade-up" data-aos-delay="200">
 						<img src="<?= images_folder('proyectos/town_square_metepec.png'); ?>" alt="">
 						<div class="portfolio-info">
 							<p>Town Square Metepec</p>
@@ -236,7 +236,7 @@
 				</div>
 				<!-- End proyectos Item -->
 				<div class="col-lg-4 col-md-6 portfolio-item">
-					<div class="portfolio-content">
+					<div class="portfolio-content" data-aos="fade-up" data-aos-delay="300">
 						<img src="<?= images_folder('proyectos/interlomas.png'); ?>" class="img-fluid" alt="">
 						<div class="portfolio-info">
 							<p>The Parallel Interlomas</p>
@@ -246,7 +246,7 @@
 				</div>
 				<!-- End proyectos Item -->
 				<div class="col-lg-4 col-md-6 portfolio-item">
-					<div class="portfolio-content">
+					<div class="portfolio-content" data-aos="fade-up" data-aos-delay="400">
 						<img src="<?= images_folder('proyectos/polanco.png'); ?>" class="img-fluid" alt="">
 						<div class="portfolio-info">
 							<p>Corporativo Punto Polanco</p>
@@ -256,7 +256,7 @@
 				</div>
 				<!-- End proyectos Item -->
 				<div class="col-lg-4 col-md-6 portfolio-item ">
-					<div class="portfolio-content">
+					<div class="portfolio-content" data-aos="fade-up" data-aos-delay="500">
 						<img src="<?= images_folder('proyectos/privada14.png'); ?>" class="img-fluid" alt="">
 						<div class="portfolio-info">
 							<p>Residencial Privada 14</p>
@@ -266,7 +266,7 @@
 				</div>
 				<!-- End proyectos Item -->
 				<div class="col-lg-4 col-md-6 portfolio-item">
-					<div class="portfolio-content">
+					<div class="portfolio-content" data-aos="fade-up" data-aos-delay="600">
 						<img src="<?= images_folder('proyectos/reserva.png'); ?>" class="img-fluid" alt="">
 						<div class="portfolio-info">
 							<p>Reserva Bezares</p>
@@ -371,7 +371,7 @@
 		</div>
 	</div>
 	<?php endif; ?>
-	<section class="job_opportunities">
+	<section id="oportunidades" class="job_opportunities">
 		<div class="container">
 			<?php if (!isset($thank_you)): ?>
 			<div class="row php-email-form justify-content-center">
@@ -453,24 +453,21 @@
 								</div>
 							</div>
 							<div class="form-group">
-								<label>
-								<input type="checkbox" id="dispext" name="dispext" value="1" />
-								<?= localized('job_opps_work_abroad'); ?>
-								</label>
+								<label for="id_recper_areatrabajo"><?= localized('job_opps_cv'); ?></label>
+								<input type="file" name="cv" id="cv" />
 							</div>
 						</div>
 					</div>
 					<div class="row">
 						<div class="col-lg-8">
 							<div class="form-group">
-								<div class="cv-button-wrapper">
-									<button class="btn btn-secondary"><?= localized('job_opps_cv'); ?></button>
-									<input type="file" name="cv" id="cv" />
-									<span class="info"><?= localized('job_opps_cv_specs'); ?></span>
-								</div>
+								<label>
+								<input type="checkbox" id="dispext" name="dispext" value="1" />
+								<?= localized('job_opps_work_abroad'); ?>
+								</label>
 							</div>
 						</div>
-						<div class="col-lg-4">
+						<div class="col-lg-4 d-flex justify-content-end">
 							<div class="form-group">
 								<button class="btn btn-primary"><?= localized('job_opps_submit'); ?></button>
 							</div>

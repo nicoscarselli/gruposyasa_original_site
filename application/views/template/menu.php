@@ -8,10 +8,10 @@
         </label>
         <ul class="menu__box">
             <li><a class="menu__item" href="<?= site_url(); ?>">Home</a></li>
-            <li><a class="menu__item" href="#nosotros"><?= localized('about_us');?></a></li>
+            <li><a class="menu__item" href="<?= site_url(); ?>#nosotros"><?= localized('about_us');?></a></li>
             <li><a class="menu__item" href="<?= site_url('proyectos'); ?>"><?= localized('projects'); ?></a></li>
             <li><a class="menu__item" href="<?= site_url('noticias'); ?>"><?= localized('news'); ?></a></li>
-            <li><a class="menu__item" href="<?= site_url('oportunidades_laborales'); ?>"><?= localized('job_opportunities'); ?></a></li>
+            <li><a class="menu__item" href="<?= site_url(); ?>#oportunidades"><?= localized('job_opportunities'); ?></a></li>
             <li><a class="menu__item btn btn-primary btn-siges-mobile" href="https://gruposyasa.com/home/">Siges</a></li>
         </ul>
     </div>

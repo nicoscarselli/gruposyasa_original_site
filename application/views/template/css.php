@@ -17,8 +17,11 @@
 <!-- Dropzone -->
 <link rel="stylesheet" type="text/css" href="<?= base_url(); ?>components/dropzone/dropzone.css" />
 
-<!-- Dropzone -->
+<!-- Fontawesome -->
 <link rel="stylesheet" type="text/css" href="<?= base_url(); ?>components/fontawesome-free/css/all.min.css"/>
+
+<!-- AOS -->
+<link rel="stylesheet" type="text/css" href="<?= base_url(); ?>components/aos/aos.css"/>
 
 <!-- Summernote -->
 <link rel="stylesheet" type="text/css" href="<?= base_url(); ?>node_modules/summernote/dist/summernote-bs4.css" />

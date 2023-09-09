@@ -289,7 +289,7 @@ section .videoWrapper iframe {
   inset: 0;
   z-index: 999999;
   overflow: hidden;
-  background: #fff;
+  background: var(--color-default);
   transition: all 0.6s ease-out;
 }
 
@@ -302,8 +302,8 @@ section .videoWrapper iframe {
   border-color: var(--color-primary) transparent var(--color-primary)
     transparent;
   border-radius: 50%;
-  width: 60px;
-  height: 60px;
+  width: 160px;
+  height: 160px;
   animation: animate-preloader 1.5s linear infinite;
 }
 
@@ -1151,11 +1151,9 @@ section .videoWrapper iframe {
   animation: animate-loading 1s linear infinite;
 }
 
-.job_opportunities .php-email-form input,
-.job_opportunities .php-email-form textarea {
-  border-radius: 0;
-  box-shadow: none;
-  font-size: 14px;
+.job_opportunities .php-email-form label {
+  font-size: 12px;
+  margin-bottom: 8px;
 }
 
 .job_opportunities .php-email-form input:focus,
@@ -1163,14 +1161,22 @@ section .videoWrapper iframe {
   border-color: var(--color-primary);
 }
 
-.job_opportunities .php-email-form input {
-  box-shadow: 0px 5px 10px var(--color-default);
-  border: 1px solid var(--color-default);
-  border-radius: 8px;
+.job_opportunities .php-email-form input, .job_opportunities .php-email-form select, .select2-container--default .select2-selection--single {
+  box-shadow: 0px 5px 5px (0,0,0,0.5) !important;
+  border: 1px solid var(--color-default) !important;
+  border-radius: 8px !important;
+  padding: 8px !important;
+  line-height: 2 !important;
+  font-size: 14px !important;
 }
 
-.job_opportunities .php-email-form textarea {
-  padding: 10px 12px;
+.job_opportunities .php-email-form label#nombre-error {
+  color: red;
+}
+
+.job_opportunities .php-email-form .info {
+  font-size: 12px;
+  color: grey;
 }
 
 .job_opportunities .php-email-form button[type="submit"] {
@@ -1180,6 +1186,15 @@ section .videoWrapper iframe {
   color: #fff;
   transition: 0.4s;
   border-radius: 5px;
+}
+
+.select2-container .select2-selection--single .select2-selection__rendered {
+  padding-left: 0px !important;
+  padding-right: 0px !important;
+}
+
+.select2-container .select2-selection--single {
+  height: auto !important;
 }
 
 @keyframes animate-loading {

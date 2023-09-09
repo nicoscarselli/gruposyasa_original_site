@@ -55,6 +55,9 @@
 <!-- Dropzone -->
 <script type="text/javascript" src="<?= base_url(); ?>components/dropzone/dropzone.js"></script>
 
+<!-- AOS -->
+<script type="text/javascript" src="<?= base_url(); ?>components/aos/aos.js"></script>
+
 <!-- Summernote -->
 <script type="text/javascript" src="<?= base_url(); ?>node_modules/summernote/dist/summernote-bs4.js"></script>
 <script type="text/javascript" src="<?= base_url(); ?>node_modules/summernote/dist/lang/summernote-es-ES.js"></script>
