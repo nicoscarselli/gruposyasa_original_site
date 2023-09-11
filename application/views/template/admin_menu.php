@@ -1,31 +1,26 @@
-<nav class="navbar navbar-expand-lg">
-    <a href="<?= site_url(); ?>" class="navbar-brand">
-        <img src="<?= images_folder('logos/syasa.png'); ?>" />
-    </a>
-
-    <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbar-content" aria-controls="navbar-content" aria-expanded="false">
-        <span class="navbar-toggler-icon"></span>
-    </button>
-
-    <div class="collapse navbar-collapse" id="navbar-content">
-        <ul class="navbar-nav ml-auto">
-            <li class="nav-item">
-                <a class="nav-link" href="<?= site_url(); ?>"><?= localized('home'); ?></a>
-            </li>
-            <li class="nav-item">
-                <a class="nav-link" href="<?= site_url('admin/proyectos'); ?>">Proyectos</a>
-            </li>
+<!-- ======= Header ======= -->
+<header id="header" class="header d-flex align-items-center">
+    <!-- .Menu -->
+    <div class="hamburger-menu">
+        <input id="menu__toggle" type="checkbox" />
+        <label class="menu__btn" for="menu__toggle">
+        <span></span>
+        </label>
+        <ul class="menu__box">
+            <li><a class="menu__item" href="<?= site_url(); ?>">><?= localized('home'); ?></a></li>
+            <li><a class="menu__item" href="<?= site_url('admin/proyectos'); ?>">Proyectos</a></li>
             <?php if ($this->session->user_type == User::USER_TYPE_SUPERADMIN): ?>
-                <li class="nav-item">
-                    <a class="nav-link" href="<?= site_url('admin/noticias'); ?>">Noticias</a>
-                </li>
-                <li class="nav-item">
-                    <a class="nav-link" href="<?= site_url('admin/usuarios'); ?>">Usuarios</a>
-                </li>
+            <li><a class="menu__item" href="<?= site_url('admin/noticias'); ?>">Noticias</a></li>
+            <li><a class="menu__item" href="<?= site_url('admin/usuarios'); ?>">Usuarios</a></li>
             <?php endif; ?>
-            <li class="nav-item">
-                <a class="nav-link" href="<?= site_url('login/logout'); ?>">Salir</a>
-            </li>
+            <li><a class="menu__item" href="<?= site_url('login/logout'); ?>">Salir</a></li>
         </ul>
     </div>
-</nav>
+    <!-- .Menu -->
+    <div class="container-fluid d-flex align-items-center justify-content-between">
+        <a href="<?= site_url(); ?>" class="logo d-flex align-items-center">
+        <img src="<?= images_folder('logos/logo.png'); ?>" alt="" class="logo">
+        </a>
+    </div>
+</header>
+<!-- End Header -->

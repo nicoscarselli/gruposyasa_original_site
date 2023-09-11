@@ -25,17 +25,7 @@ $(function() {
             id_recper_sexo: 'required',
             id_recper_pais: 'required',
             id_recper_provincia: 'required',
-            ciudad: 'required',
-            telefono: {
-                required: true,
-                digits: true
-            },
-            id_recper_titulo: 'required',
             id_recper_areatrabajo: 'required',
-            anioexperiencia: {
-                required: true,
-                digits: true
-            },
             id_recper_moneda: 'required',
             monto: {
                 required: true,
