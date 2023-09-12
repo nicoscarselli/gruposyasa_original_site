@@ -6,6 +6,7 @@
  */
 ?>
 
+
 <!-- ======= Breadcrumbs ======= -->
 <div class="breadcrumbs d-flex align-items-center" style="background-image: url('<?= images_folder('header_proyectos.png'); ?>');">
     <div class="container position-relative d-flex flex-column align-items-center">
