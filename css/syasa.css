@@ -963,7 +963,7 @@ section .videoWrapper iframe {
   cursor: pointer;
   font-size: 16px;
   font-weight: 700;
-  padding: 8px;
+  padding: 16px;
 }
 
 .proyectos .search-control + .input-group-btn .btn {
@@ -973,23 +973,23 @@ section .videoWrapper iframe {
   color: white;
   cursor: pointer;
   display: flex;
-  height: 24px;
+  height: 40px;
   justify-content: center;
   padding: 16px;
   position: absolute;
-  right: 4px;
+  right: 10px;
   text-align: center;
-  top: 4px;
-  width: 24px;
+  top: 10px;
+  width: 40px;
 }
 
 .category-checkbox {
   display: inline-block;
   cursor: pointer;
-  padding: 8px;
+  padding: 14px;
   border: 2px solid var(--color-primary);
   border-radius: 8px;
-  margin: 0 8px 8px 0px;
+  margin: 0 14px 14px 0px;
 }
 
 .category-checkbox input[type="checkbox"] {
@@ -999,7 +999,7 @@ section .videoWrapper iframe {
 
 .category-checkbox label {
   cursor: pointer;
-  font-size: 16px;
+  font-size: 18px;
   color: var(--color-primary);
   font-weight: 700;
 }
