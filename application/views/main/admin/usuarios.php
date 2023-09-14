@@ -5,22 +5,25 @@
  */
 ?>
 
+<!-- ======= Breadcrumbs ======= -->
+<div class="breadcrumbs d-flex align-items-center" style="background-image: url('<?= images_folder('header_oportunidades.png'); ?>');">
+    <div class="container position-relative d-flex flex-column align-items-center">
+           <h2>Usuarios</h2>
+    </div>
+</div>
+<!-- End Breadcrumbs -->
+
 <section class="container">
-    <div class="row">
-        <div class="col-12">
-            <span class="table-title">Usuarios</span>
-        </div>
-    </div>
 
-    <div class="row justify-content-end">
+    <div class="row mb-5">
         <div class="col text-right">
-            <a href="<?= site_url('admin/user_form'); ?>" class="btn">Nuevo</a>
+            <a href="<?= site_url('admin/user_form'); ?>" class="btn btn-primary">Nuevo</a>
         </div>
     </div>
 
     <div class="row">
         <div class="col-12">
-            <table class="table table-striped users-table">
+            <table class="table table-hover users-table">
                 <thead>
                     <tr>
                         <th>E-mail</th>
@@ -39,11 +42,11 @@
                                 <?php endforeach; ?>
                             </td>
                             <td>
-                                <a href="<?= site_url('admin/user_form/' . $user->id); ?>" class="btn">Editar</a>
+                                <a href="<?= site_url('admin/user_form/' . $user->id); ?>" class="btn btn-secondary">Editar</a>
 								<?php if ($user->user_type == User::USER_TYPE_ADMIN): ?>
-									<a href="<?= site_url('admin/user_projects/' . $user->id); ?>" class="btn">Asignar Proyectos</a>
+									<a href="<?= site_url('admin/user_projects/' . $user->id); ?>" class="btn btn-info">Asignar Proyectos</a>
 								<?php endif; ?>
-                                <a href="#" class="btn delete-btn" data-id="<?= $user->id; ?>">Borrar</a>
+                                <a href="#" class="btn btn-danger" data-id="<?= $user->id; ?>">Borrar</a>
                             </td>
                         </tr>
                     <?php endforeach; ?>

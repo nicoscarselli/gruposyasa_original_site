@@ -10,12 +10,15 @@
     var user_id = <?= ($edit) ? $user->id : 0; ?>;
 </script>
 
-<section class="container user-form">
-    <div class="row">
-        <div class="col-12">
-            <span class="form-title"><?= ($edit) ? 'Editar Usuario: ' . $user->email : 'Nuevo Usuario'; ?></span>
-        </div>
+<!-- ======= Breadcrumbs ======= -->
+<div class="breadcrumbs d-flex align-items-center" style="background-image: url('<?= images_folder('header_oportunidades.png'); ?>');">
+    <div class="container position-relative d-flex flex-column align-items-center">
+           <h2><?= ($edit) ? 'Editar Usuario: ' . $user->email : 'Nuevo Usuario'; ?></h2>
     </div>
+</div>
+<!-- End Breadcrumbs -->
+
+<section class="container user-form">
 
     <?php if (!empty(validation_errors())): ?>
         <div class="row">
@@ -39,13 +42,13 @@
         <?php endif; ?>
 
         <div class="row">
-            <div class="col-12">
-                <div class="form-group">
+            <div class="col-6">
+                <div class="form-group mb-4">
                     <label for="email">Email</label>
                     <input type="email" class="form-control" name="email" id="email" value="<?= set_value('email', ($edit) ? $user->email : ''); ?>" />
                 </div>
 
-                <div class="form-group">
+                <div class="form-group mb-4">
                     <label for="user_type">Tipo</label>
                     <select class="form-control" name="user_type" id="user_type">
                         <?php foreach ($user_types as $type): ?>
@@ -56,19 +59,17 @@
                     </select>
                 </div>
 
-                <div class="form-group">
+                <div class="form-group mb-4">
                     <label for="password">Contraseña</label>
                     <input class="form-control" type="password" name="password" id="password" />
                 </div>
 
-                <div class="form-group">
+                <div class="form-group mb-4">
                     <label for="repeat_password">Repetir contraseña</label>
                     <input class="form-control" type="password" name="repeat_password" id="repeat_password" />
                 </div>
             </div>
         </div>
-
-        <hr />
 
         <div class="row">
             <div class="col-12">

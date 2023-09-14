@@ -376,7 +376,7 @@
 			<?php if (!isset($thank_you)): ?>
 			<div class="row php-email-form justify-content-center">
 				<div class="col-lg-3">
-          <div class="content">
+         			<div class="content">
 						<h2><?= localized('oportunidades_main_title'); ?></h2>
 						<p><?= localized('oportunidades_text'); ?></p>
 					</div>
@@ -388,6 +388,10 @@
 							<div class="form-group">
 								<label for="nombre"><?= localized('job_opps_first_name'); ?></label>
 								<input type="text" name="nombre" id="nombre" class="form-control" value="<?= set_value('nombre'); ?>" />
+							</div>
+							<div class="form-group">
+								<label for="apellido"><?= localized('job_opps_last_name'); ?></label>
+								<input type="text" name="apellido" id="apellido" class="form-control" value="<?= set_value('apellido'); ?>" />
 							</div>
 							<div class="form-group">
 								<label for="email"><?= localized('job_opps_email'); ?></label>
@@ -423,6 +427,12 @@
 								<label for="id_recper_provincia"><?= localized('job_opps_state'); ?></label>
 								<select class="form-control select2" id="id_recper_provincia" name="id_recper_provincia"></select>
 							</div>
+
+
+							<div class="form-group">
+								<label for="telefono"><?= localized('job_opps_phone'); ?></label>
+								<input type="text" class="form-control" id="telefono" name="telefono" value="<?= set_value('telefono'); ?>" />
+							</div>
 						</div>
 						<div class="col-lg-4">
 							<div class="form-group">
@@ -432,6 +442,16 @@
 									<option value="<?= $area->id_recper_areatrabajo; ?>" <?= set_select('id_recper_areatrabajo', $area->id_recper_areatrabajo); ?>>
 										<?= translated($area->codigo_traduccion, $language, $translations); ?>
 									</option>
+									<?php endforeach; ?>
+								</select>
+							</div>
+							<div class="form-group">
+								<label for="id_recper_titulo"><?= localized('job_opps_job_title'); ?></label>
+								<select class="form-control select2" name="id_recper_titulo" id="id_recper_titulo">
+									<?php foreach ($titles as $title): ?>
+										<option value="<?= $title->id_recper_titulo; ?>" <?= set_select('id_recper_titulo', $title->id_recper_titulo); ?>>
+											<?= translated($title->codigo_traduccion, $language, $translations); ?>
+										</option>
 									<?php endforeach; ?>
 								</select>
 							</div>
@@ -478,12 +498,9 @@
 			</div>
 			<?php else: //$thank_you isset?>
 			<div class="row">
-				<div class="d-none d-md-flex col-md-6">
-					<img src="<?= images_folder('job_opportunities/jobs.jpg'); ?>" class="img-fluid" style="height: fit-content;"/>
-				</div>
-				<div class="col col-md-6">
-					<div class="thank-you-header"><?= localized('job_opps_thank_you_header'); ?></div>
-					<div class="thank-you-text"><?= localized('job_opps_thank_you_text'); ?></div>
+				<div class="col-lg-12">
+					<h2 class="thank-you-header"><?= localized('job_opps_thank_you_header'); ?></h2>
+					<p class="thank-you-text"><?= localized('job_opps_thank_you_text'); ?></p>
 				</div>
 			</div>
 			<?php endif; ?>

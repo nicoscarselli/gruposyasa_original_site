@@ -13,7 +13,7 @@ $(function() {
         ]
     });
 
-    $('.projects-table').on('click', '.delete-btn', function(e) {
+    $('.projects-table').on('click', '.btn .btn-danger', function(e) {
         e.preventDefault();
         var project_id = $(this).data('id');
 

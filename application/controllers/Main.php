@@ -58,7 +58,6 @@ class Main extends Syasa_Controller {
             'id_recper_sexo' => post('id_recper_sexo'),
             'id_recper_pais' => post('id_recper_pais'),
             'id_recper_provincia' => post('id_recper_provincia'),
-            'ciudad' => post('ciudad'),
             'telefono' => post('telefono'),
             'id_recper_titulo' => post('id_recper_titulo'),
             'id_recper_areatrabajo' => post('id_recper_areatrabajo'),
@@ -67,7 +66,6 @@ class Main extends Syasa_Controller {
             'dispext' => (post('dispext')) ? 1 : 0,
             'curriculum' => '',
             'referencia' => '',
-            'anioexperiencia' => post('anioexperiencia')
         ];
 
         $upload_config = [
@@ -147,11 +145,6 @@ class Main extends Syasa_Controller {
                 'field' => 'id_recper_areatrabajo',
                 'label' => localized('job_opps_job_area'),
                 'rules' => 'required'
-            ],
-            [
-                'field' => 'anioexperiencia',
-                'label' => localized('job_opps_years_experience'),
-                'rules' => 'required|numeric'
             ],
             [
                 'field' => 'id_recper_moneda',
