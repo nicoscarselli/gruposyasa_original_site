@@ -9,7 +9,7 @@
         <ul class="menu__box">
             <li><a class="menu__item" href="<?= site_url(); ?>">Home</a></li>
             <li><a class="menu__item" href="<?= site_url(); ?>#nosotros"><?= localized('about_us');?></a></li>
-            <li><a class="menu__item" href="<?= site_url('proyectos'); ?>"><?= localized('projects'); ?></a></li>
+            <li><a class="menu__item" href="<?= site_url(); ?>#proyectos"><?= localized('projects'); ?></a></li>
             <li><a class="menu__item" href="<?= site_url('noticias'); ?>"><?= localized('news'); ?></a></li>
             <li><a class="menu__item" href="<?= site_url(); ?>#oportunidades"><?= localized('job_opportunities'); ?></a></li>
             <li><a class="menu__item btn btn-primary btn-siges-mobile" href="https://gruposyasa.com/home/" target="_blank">Siges</a></li>

@@ -204,80 +204,190 @@
 	<!-- ======= Proyectos Section ======= -->
 	<section id="proyectos" class="proyectos">
 		<div class="container">
-			<div class="justify-content-between justify-content-start mb-5">
-				<div class="row">
-					<div class="col-lg-6 col-6">
-						<h2><?= localized('proyectos_main_title'); ?></h2>
-					</div>
-					<div class="col-lg-6 col-6 d-flex justify-content-end">
-						<a class="btn btn-primary" href="<?= site_url('proyectos'); ?>"><?= localized('ver_mas_boton'); ?></a>
-					</div>
+			<div class="row mb-5">
+				<div class="col-12 text-center">
+					<h2><?= localized('proyectos_main_title'); ?></h2>
 				</div>
 			</div>
-			<div class="row gy-4 portfolio-container">
-				<div class="col-lg-4 col-md-6 portfolio-item ">
-					<div class="portfolio-content" data-aos="fade-up" data-aos-delay="100">
-						<img src="<?= images_folder('proyectos/parque_lomas.png'); ?>" class="img-fluid" alt="">
-						<div class="portfolio-info">
-							<p>Parque Lomas-Vidalta</p>
-							<a class="ver-mas" href="<?= site_url('proyectos/proyecto/5'); ?>">Ver detalles</a>
+			<div class="row portfolio-container">
+				<div class="owl-theme owl-carousel proyectos_destacados">
+					<div class="item">
+						<div class="portfolio-content">
+							<img src="<?= images_folder('proyectos/parque_lomas.png'); ?>" class="img-fluid" alt="">
+							<div class="portfolio-info">
+								<p>Parque Lomas-Vidalta</p>
+								<a class="ver-mas" href="<?= site_url('proyectos/proyecto/5'); ?>">Ver detalles</a>
+							</div>
+						</div>
+					</div>
+
+					<div class="item">
+						<div class="portfolio-content">
+							<img src="<?= images_folder('proyectos/town_square_metepec.png'); ?>" alt="">
+							<div class="portfolio-info">
+								<p>Town Square Metepec</p>
+								<a class="ver-mas" href="<?= site_url('proyectos/proyecto/142'); ?>">Ver detalles</a>
+							</div>
+						</div>
+					</div>
+
+					<div class="item">
+						<div class="portfolio-content">
+							<img src="<?= images_folder('proyectos/interlomas.png'); ?>" class="img-fluid" alt="">
+							<div class="portfolio-info">
+								<p>The Parallel Interlomas</p>
+								<a class="ver-mas" href="<?= site_url('proyectos/proyecto/32'); ?>">Ver detalles</a>
+							</div>
+						</div>
+					</div>
+
+					<div class="item">
+						<div class="portfolio-content">
+							<img src="<?= images_folder('proyectos/polanco.png'); ?>" class="img-fluid" alt="">
+							<div class="portfolio-info">
+								<p>Corporativo Punto Polanco</p>
+								<a class="ver-mas" href="<?= site_url('proyectos/proyecto/15'); ?>">Ver detalles</a>
+							</div>
+						</div>
+					</div>
+
+					<div class="item">
+						<div class="portfolio-content">
+							<img src="<?= images_folder('proyectos/privada14.png'); ?>" class="img-fluid" alt="">
+							<div class="portfolio-info">
+								<p>Residencial Privada 14</p>
+								<a class="ver-mas" href="<?= site_url('proyectos/proyecto/12'); ?>">Ver detalles</a>
+							</div>
+						</div>
+					</div>
+					
+					<div class="item">
+						<div class="portfolio-content">
+							<img src="<?= images_folder('proyectos/reserva.png'); ?>" class="img-fluid" alt="">
+							<div class="portfolio-info">
+								<p>Reserva Bezares</p>
+								<a class="ver-mas" href="<?= site_url('proyectos/proyecto/2'); ?>">Ver detalles</a>
+							</div>
 						</div>
 					</div>
 				</div>
-				<!-- End proyectos Item -->
-				<div class="col-lg-4 col-md-6 portfolio-item">
-					<div class="portfolio-content" data-aos="fade-up" data-aos-delay="200">
-						<img src="<?= images_folder('proyectos/town_square_metepec.png'); ?>" alt="">
-						<div class="portfolio-info">
-							<p>Town Square Metepec</p>
-							<a class="ver-mas" href="<?= site_url('proyectos/proyecto/142'); ?>">Ver detalles</a>
-						</div>
-					</div>
-				</div>
-				<!-- End proyectos Item -->
-				<div class="col-lg-4 col-md-6 portfolio-item">
-					<div class="portfolio-content" data-aos="fade-up" data-aos-delay="300">
-						<img src="<?= images_folder('proyectos/interlomas.png'); ?>" class="img-fluid" alt="">
-						<div class="portfolio-info">
-							<p>The Parallel Interlomas</p>
-							<a class="ver-mas" href="<?= site_url('proyectos/proyecto/32'); ?>">Ver detalles</a>
-						</div>
-					</div>
-				</div>
-				<!-- End proyectos Item -->
-				<div class="col-lg-4 col-md-6 portfolio-item">
-					<div class="portfolio-content" data-aos="fade-up" data-aos-delay="400">
-						<img src="<?= images_folder('proyectos/polanco.png'); ?>" class="img-fluid" alt="">
-						<div class="portfolio-info">
-							<p>Corporativo Punto Polanco</p>
-							<a class="ver-mas" href="<?= site_url('proyectos/proyecto/15'); ?>">Ver detalles</a>
-						</div>
-					</div>
-				</div>
-				<!-- End proyectos Item -->
-				<div class="col-lg-4 col-md-6 portfolio-item ">
-					<div class="portfolio-content" data-aos="fade-up" data-aos-delay="500">
-						<img src="<?= images_folder('proyectos/privada14.png'); ?>" class="img-fluid" alt="">
-						<div class="portfolio-info">
-							<p>Residencial Privada 14</p>
-							<a class="ver-mas" href="<?= site_url('proyectos/proyecto/12'); ?>">Ver detalles</a>
-						</div>
-					</div>
-				</div>
-				<!-- End proyectos Item -->
-				<div class="col-lg-4 col-md-6 portfolio-item">
-					<div class="portfolio-content" data-aos="fade-up" data-aos-delay="600">
-						<img src="<?= images_folder('proyectos/reserva.png'); ?>" class="img-fluid" alt="">
-						<div class="portfolio-info">
-							<p>Reserva Bezares</p>
-							<a class="ver-mas" href="<?= site_url('proyectos/proyecto/2'); ?>">Ver detalles</a>
-						</div>
-					</div>
-				</div>
-				<!-- End proyectos Item -->
 			</div>
 		</div>
 	</section>
+
+	<section id="por_pais">
+		<div class="container">
+		<div class="row mb-5">
+				<div class="col-12 text-center">
+					<h2><?= localized('ubicacion'); ?></h2>
+				</div>
+			</div>
+			<div class="row">
+				<div class="col-lg-3 col-6 text-center mb-3">
+					<a href=""><img src="<?= images_folder('proyectos/paises/argentina.svg'); ?>" alt="" class="mb-3 w-25"></a>
+					<h5><?= localized('argentina'); ?></h5>
+				</div>
+				<div class="col-lg-3 col-6 text-center mb-3">
+					<a href=""><img src="<?= images_folder('proyectos/paises/mexico.svg'); ?>" alt="" class="mb-3 w-25"></a>
+					<h5><?= localized('mexico'); ?></h5> 
+				</div>
+				<div class="col-lg-3 col-6 text-center mb-3">
+					<a href=""><img src="<?= images_folder('proyectos/paises/panama.svg'); ?>" alt="" class="mb-3 w-25"></a>
+					<h5><?= localized('panama'); ?></h5> 
+				</div>
+				<div class="col-lg-3 col-6 text-center mb-3">
+					<a href=""><img src="<?= images_folder('proyectos/paises/otros.svg'); ?>" alt="" class="mb-3 w-25"></a>
+					<h5><?= localized('otro_pais'); ?></h5> 
+				</div>
+			</div>
+		</div>
+	</section>
+
+	<section id="proyectos" class="proyectos proyectos_por_tipo">
+	<div class="container">
+			<div class="row mb-5">
+				<div class="col-12 text-center">
+					<h2><?= localized('tipo_de_proyecto'); ?></h2>
+				</div>
+			</div>
+			<div class="row">
+				<div class="col-lg-4 mb-5">
+					<div class="proyectos_por_tipo">
+						<img src="<?= images_folder('proyectos/tipos/aeropuertos.png'); ?>" class="img-fluid" alt="">
+						<div class="proyectos_por_tipo-info">
+							<a href=""><h5><?= localized('aeropuertos'); ?></h5></a>
+						</div>
+					</div>
+				</div>
+				<div class="col-lg-4 mb-5">
+					<div class="proyectos_por_tipo">
+						<img src="<?= images_folder('proyectos/tipos/bancarios.png'); ?>" class="img-fluid" alt="">
+						<div class="proyectos_por_tipo-info">
+							<a href=""><h5><?= localized('bancarios'); ?></h5></a>
+						</div>
+					</div>
+				</div>
+				<div class="col-lg-4 mb-5">
+					<div class="proyectos_por_tipo">
+						<img src="<?= images_folder('proyectos/tipos/centros_comerciales.png'); ?>" class="img-fluid" alt="">
+						<div class="proyectos_por_tipo-info">
+							<a href=""><h5><?= localized('centros'); ?></h5></a>
+						</div>
+					</div>
+				</div>
+				<div class="col-lg-4 mb-5">
+					<div class="proyectos_por_tipo">
+						<img src="<?= images_folder('proyectos/tipos/hospitales.png'); ?>" class="img-fluid" alt="">
+						<div class="proyectos_por_tipo-info">
+							<a href=""><h5><?= localized('hospitales'); ?></h5></a>
+						</div>
+					</div>
+				</div>
+				<div class="col-lg-4 mb-5">
+					<div class="proyectos_por_tipo">
+						<img src="<?= images_folder('proyectos/tipos/hoteles.png'); ?>" class="img-fluid" alt="">
+						<div class="proyectos_por_tipo-info">
+							<a href=""><h5><?= localized('hoteles'); ?></h5></a>
+						</div>
+					</div>
+				</div>
+				<div class="col-lg-4 mb-5">
+					<div class="proyectos_por_tipo">
+						<img src="<?= images_folder('proyectos/tipos/leed.png'); ?>" class="img-fluid" alt="">
+						<div class="proyectos_por_tipo-info">
+							<a href=""><h5><?= localized('leed'); ?></h5></a>
+						</div>
+					</div>
+				</div>
+				<div class="col-lg-4 mb-5">
+					<div class="proyectos_por_tipo">
+						<img src="<?= images_folder('proyectos/tipos/oficinas.png'); ?>" class="img-fluid" alt="">
+						<div class="proyectos_por_tipo-info">
+							<a href=""><h5><?= localized('oficinas'); ?></h5></a>
+						</div>
+					</div>
+				</div>
+				<div class="col-lg-4 mb-5">
+					<div class="proyectos_por_tipo">
+						<img src="<?= images_folder('proyectos/tipos/residenciales.png'); ?>" class="img-fluid" alt="">
+						<div class="proyectos_por_tipo-info">
+							<a href=""><h5><?= localized('residenciales'); ?></h5></a>
+						</div>
+					</div>
+				</div>
+				<div class="col-lg-4 mb-5">
+					<div class="proyectos_por_tipo">
+						<img src="<?= images_folder('proyectos/tipos/otros.png'); ?>" class="img-fluid" alt="">
+						<div class="proyectos_por_tipo-info">
+							<a href=""><h5><?= localized('otros'); ?></h5></a>
+						</div>
+					</div>
+				</div>
+			</div>
+		</div>
+
+	</section>
+
 	<!-- End proyectos Section -->
 	<!-- ======= Recent Blog Posts Section ======= -->
 	<?php /** @var News[] $news **/ ?>

@@ -490,6 +490,7 @@ section .videoWrapper iframe {
     display: block;
     padding: 24px;
     color: var(--color-secondary-light);
+    font-family: var(--font-primary);
     font-size: 24px;
     font-weight: 700;
     text-decoration: none;
@@ -855,22 +856,29 @@ section .videoWrapper iframe {
 /*--------------------------------------------------------------
   # proyectos Section
   --------------------------------------------------------------*/
-.proyectos .portfolio-content {
+.proyectos .portfolio-content, .proyectos .proyectos_por_tipo {
   position: relative;
   overflow: hidden;
   width: 100%;
-  height: 400px;
   display: inline-grid;
 }
 
-.proyectos .portfolio-content img {
+.proyectos .portfolio-content {
+  height: 400px;
+}
+
+.proyectos .proyectos_por_tipo {
+  height: 255px;
+}
+
+.proyectos .portfolio-content img, .proyectos .proyectos_por_tipo img {
   transition: 0.3s;
   object-fit: cover;
   width: 100%;
   height: 100%;
 }
 
-.proyectos .portfolio-content .portfolio-info {
+.proyectos .portfolio-content .portfolio-info, .proyectos .proyectos_por_tipo .proyectos_por_tipo-info {
   position: absolute;
   inset: 0;
   z-index: 3;
@@ -900,6 +908,19 @@ section .videoWrapper iframe {
   text-transform: uppercase;
 }
 
+.proyectos .proyectos_por_tipo .proyectos_por_tipo-info h5 {
+  bottom: 32px;
+  color: rgba(255, 255, 255, 1);
+  display: inline-block;
+  font-size: 24px;
+  font-weight: 700;
+  left: 0;
+  position: absolute;
+  right: 0;
+  text-align: center;
+  text-transform: uppercase;
+}
+
 .proyectos .portfolio-content .portfolio-info p {
   bottom: 32px;
   color: rgba(255, 255, 255, 1);
@@ -923,27 +944,6 @@ section .videoWrapper iframe {
   color: rgba(255, 255, 255, 1);
 }
 
-.proyectos .portfolio-content .portfolio-info .preview-link,
-.proyectos .portfolio-content .portfolio-info .details-link {
-  position: absolute;
-  left: calc(50% - 40px);
-  font-size: 26px;
-  top: calc(50% - 14px);
-  color: #fff;
-  transition: 0.3s;
-  line-height: 1.2;
-}
-
-.proyectos .portfolio-content .portfolio-info .preview-link:hover,
-.proyectos .portfolio-content .portfolio-info .details-link:hover {
-  color: var(--color-primary);
-}
-
-.proyectos .portfolio-content .portfolio-info .details-link {
-  left: 50%;
-  font-size: 34px;
-  line-height: 0;
-}
 
 .proyectos .portfolio-content:hover .portfolio-info {
   opacity: 1;

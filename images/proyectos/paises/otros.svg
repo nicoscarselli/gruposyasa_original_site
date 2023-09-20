@@ -1,0 +1,31 @@
+<svg xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" width="120" height="122" viewBox="0 0 120 122">
+  <defs>
+    <filter id="Elipse_4" x="1" y="4" width="118" height="118" filterUnits="userSpaceOnUse">
+      <feOffset dy="3" input="SourceAlpha"/>
+      <feGaussianBlur stdDeviation="3" result="blur"/>
+      <feFlood flood-opacity="0.161"/>
+      <feComposite operator="in" in2="blur"/>
+      <feComposite in="SourceGraphic"/>
+    </filter>
+    <clipPath id="clip-path">
+      <circle id="Elipse_3" data-name="Elipse 3" cx="50" cy="50" r="50" fill="#fff" stroke="#707070" stroke-width="1"/>
+    </clipPath>
+  </defs>
+  <g id="Grupo_944" data-name="Grupo 944" transform="translate(-473 -2148)">
+    <g id="Elipse_5" data-name="Elipse 5" transform="translate(473 2148)" fill="#fff" stroke="#172124" stroke-width="2">
+      <circle cx="60" cy="60" r="60" stroke="none"/>
+      <circle cx="60" cy="60" r="59" fill="none"/>
+    </g>
+    <g id="Grupo_941" data-name="Grupo 941" transform="translate(-881 842)">
+      <g transform="matrix(1, 0, 0, 1, 1354, 1306)" filter="url(#Elipse_4)">
+        <circle id="Elipse_4-2" data-name="Elipse 4" cx="50" cy="50" r="50" transform="translate(10 10)" fill="#fff"/>
+      </g>
+      <g id="Enmascarar_grupo_1" data-name="Enmascarar grupo 1" transform="translate(1364 1316)" clip-path="url(#clip-path)">
+        <g id="Grupo_911" data-name="Grupo 911">
+          <rect id="Rectángulo_269" data-name="Rectángulo 269" width="50" height="100" transform="translate(100 100) rotate(180)" fill="#766c57"/>
+          <rect id="Rectángulo_270" data-name="Rectángulo 270" width="50" height="100" transform="translate(50 100) rotate(180)" fill="#172124"/>
+        </g>
+      </g>
+    </g>
+  </g>
+</svg>

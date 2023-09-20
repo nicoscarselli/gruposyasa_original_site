@@ -58,6 +58,23 @@ $lang = [
 
     /* PROYECTOS */
     'proyectos_main_title' => 'Proyectos Destacados',
+
+    'ubicacion' => 'Ubicación',
+    'argentina' => 'Argentina',
+    'mexico' => 'México',
+    'panama' => 'Panamá',
+    'otro_pais' => 'Otros',
+
+    'tipo_de_proyecto' => 'Tipo de proyecto',
+    'aeropuertos' => 'AEROPUERTOS',
+    'bancarios' => 'BANCARIOS',
+    'centros' => 'CENTROS COMERCIALES',
+    'hospitales' => 'HOSPITALES',
+    'hoteles' => 'HOTELES',
+    'leed' => 'LEED',
+    'oficinas' => 'OFICINAS',
+    'residenciales' => 'RESIDENCIALES',
+    'otros' => 'OTROS',
     /* PROYECTOS */
 
     /* NOTICIAS */
