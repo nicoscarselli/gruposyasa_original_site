@@ -304,7 +304,7 @@
 	</section>
 
 	<section id="proyectos" class="proyectos proyectos_por_tipo">
-	<div class="container">
+		<div class="container">
 			<div class="row mb-5">
 				<div class="col-12 text-center">
 					<h2><?= localized('tipo_de_proyecto'); ?></h2>
@@ -385,7 +385,6 @@
 				</div>
 			</div>
 		</div>
-
 	</section>
 
 	<!-- End proyectos Section -->
