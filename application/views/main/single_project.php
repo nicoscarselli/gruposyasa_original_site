@@ -8,7 +8,7 @@
 <div class="breadcrumbs d-flex align-items-center text-center" style="background-image: url('<?= project_files_image($project->id, $project->main_image); ?>');">
 	<div class="container position-relative align-items-center">
 		<h2><?= $project->name; ?></h2>
-		<a href="<?= site_url(); ?>">Home</a> / <a href="<?= site_url('proyectos'); ?>"><?= localized('projects'); ?></a>
+		<a href="<?= site_url(); ?>">Home</a> / <a href="<?= site_url('#proyectos'); ?>"><?= localized('projects'); ?></a>
 	</div>
 </div>
 <!-- End Breadcrumbs -->

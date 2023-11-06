@@ -2,10 +2,10 @@
 $lang = [
     /* HERO */
     'hero_title' => 'We manage businesses to build your dreams',
-    'hero_text' => 'Earning an industry reputation for answering the toughest challenges to deliver award-winning projects.',
+    'hero_text' => 'We are experts in executing complex, award-winning projects.',
 
     'hero_title_2' => 'Challenges inspire us',
-    'hero_text_2' => 'More than 20 years of experience support us to address any type of challenge and challenge.',
+    'hero_text_2' => 'More than 20 years support us to face any type of project and challenge.',
 
     'hero_title_3' => 'We take risks',
     'hero_text_3' => 'To capitalize and optimize resources and maximize results.',
@@ -19,6 +19,10 @@ $lang = [
     /* QUE HACEMOS */
     'que_hacemos_title' => 'We provide project management services in Latin America. We apply the most sophisticated engineering technologies, but -at the same time- we claim excellence in craftsmanship.',
     /* QUE HACEMOS */
+
+    /* VALORES */
+    'valores_main_title' => 'Our values',
+    /* VALORES */
 
     /* SERVICIOS */
     'servicios_main_title' => 'Our Services',
@@ -57,7 +61,8 @@ $lang = [
     /* VALORES */
 
     /* PROYECTOS */
-    'proyectos_main_title' => 'Featured projects',
+    'proyectos_destacados' => 'Featured projects',
+    'proyectos_syasa' => 'Syasa projects',
 
     'ubicacion' => 'Region',
     'argentina' => 'Argentina',
@@ -82,7 +87,7 @@ $lang = [
     /* NOTICIAS */
 
     /* OPORTUNIDADES LABORALES */
-    'oportunidades_main_title' => 'Job Opportunities',
+    'oportunidades_main_title' => 'Work with Us',
     'oportunidades_text' => 'Complete the form so that we know your experience.',
     /* OPORTUNIDADES LABORALES */
 
