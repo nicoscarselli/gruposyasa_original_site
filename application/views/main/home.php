@@ -34,7 +34,7 @@
 			<div class="row justify-content-between">
 				<div class="col-lg-4 d-flex align-items-center">
 					<div class="content" data-aos="fade-up">
-						<h2><?= localized('quienes_somos_title'); ?></h2>
+						<h3 class="text-uppercase"><?= localized('quienes_somos_title'); ?></h3>
 						<p><?= localized('quienes_somos_text'); ?></p>
 					</div>
 				</div>
@@ -50,7 +50,7 @@
 		<div class="container">
 			<div class="row justify-content-center text-center">
 				<div class="col-lg-12 align-items-center" >
-					<h2 class="text-white" data-aos="fade-up"><?= localized('que_hacemos_title'); ?></h2>
+					<h3 class="text-white" data-aos="fade-up"><?= localized('que_hacemos_title'); ?></h3>
 				</div>
 			</div>
 		</div>
@@ -62,7 +62,7 @@
 		<div class="container">
 			<div class="row mb-5">
 				<div class="col-lg-12">
-					<h2 class="text-uppercase"><?= localized('servicios_main_title'); ?></h2>
+					<h3 class="text-uppercase"><?= localized('servicios_main_title'); ?></h3>
 				</div>
 			</div>
 			<div class="row gy-4">
@@ -140,7 +140,7 @@
 		<div class="container" >
 			<div class="row mb-5">
 				<div class="col-lg-12">
-					<h2 class="text-white text-uppercase"><?= localized('valores_main_title'); ?></h2>
+					<h3 class="text-white text-uppercase"><?= localized('valores_main_title'); ?></h3>
 				</div>
 			</div>
 			<div class="row gy-4">
@@ -220,70 +220,26 @@
 		<div class="container">
 			<div class="row mb-5">
 				<div class="col-12 text-center">
-					<h1 class="text-uppercase"><?= localized('proyectos_destacados'); ?></h1>
+					<h3 class="text-uppercase"><?= localized('proyectos_destacados'); ?></h3>
 				</div>
 			</div>
 			<div class="row portfolio-container">
 				<div class="owl-theme owl-carousel proyectos_destacados">
-					<div class="item">
-						<div class="portfolio-content">
-							<img src="<?= images_folder('proyectos/parque_lomas.png'); ?>" class="img-fluid" alt="">
-							<div class="portfolio-info">
-								<p>Parque Lomas-Vidalta</p>
-								<a class="ver-mas" href="<?= site_url('proyectos/proyecto/5'); ?>">Ver detalles</a>
+					<?php foreach($projects_outstanding as $project){ ?>
+						<div class="item">
+							<div class="portfolio-content">
+								<img src="https://www.gruposyasa.com/webpagedemo/project_files/<?php echo $project->id; echo '/'; echo $project->main_image;?>" 
+									class="img-fluid" alt="">
+								<div class="portfolio-info">
+									<div>
+										<h4><?php echo json_decode($project->categories[0]->name)->es; ?></h4>
+									</div>
+									<p><?= $project->name; ?></p>
+									<a class="ver-mas" href="<?= site_url('proyectos/proyecto/'.$project->id); ?>">Ver detalles</a>
+								</div>
 							</div>
 						</div>
-					</div>
-
-					<div class="item">
-						<div class="portfolio-content">
-							<img src="<?= images_folder('proyectos/town_square_metepec.png'); ?>" alt="">
-							<div class="portfolio-info">
-								<p>Town Square Metepec</p>
-								<a class="ver-mas" href="<?= site_url('proyectos/proyecto/142'); ?>">Ver detalles</a>
-							</div>
-						</div>
-					</div>
-
-					<div class="item">
-						<div class="portfolio-content">
-							<img src="<?= images_folder('proyectos/interlomas.png'); ?>" class="img-fluid" alt="">
-							<div class="portfolio-info">
-								<p>The Parallel Interlomas</p>
-								<a class="ver-mas" href="<?= site_url('proyectos/proyecto/32'); ?>">Ver detalles</a>
-							</div>
-						</div>
-					</div>
-
-					<div class="item">
-						<div class="portfolio-content">
-							<img src="<?= images_folder('proyectos/polanco.png'); ?>" class="img-fluid" alt="">
-							<div class="portfolio-info">
-								<p>Corporativo Punto Polanco</p>
-								<a class="ver-mas" href="<?= site_url('proyectos/proyecto/15'); ?>">Ver detalles</a>
-							</div>
-						</div>
-					</div>
-
-					<div class="item">
-						<div class="portfolio-content">
-							<img src="<?= images_folder('proyectos/privada14.png'); ?>" class="img-fluid" alt="">
-							<div class="portfolio-info">
-								<p>Residencial Privada 14</p>
-								<a class="ver-mas" href="<?= site_url('proyectos/proyecto/12'); ?>">Ver detalles</a>
-							</div>
-						</div>
-					</div>
-					
-					<div class="item">
-						<div class="portfolio-content">
-							<img src="<?= images_folder('proyectos/reserva.png'); ?>" class="img-fluid" alt="">
-							<div class="portfolio-info">
-								<p>Reserva Bezares</p>
-								<a class="ver-mas" href="<?= site_url('proyectos/proyecto/2'); ?>">Ver detalles</a>
-							</div>
-						</div>
-					</div>
+					<?php }?>
 				</div>
 			</div>
 		</div>
@@ -293,7 +249,7 @@
 		<div class="container">
 			<div class="row mb-5">
 				<div class="col-12 text-center">
-				<h1 class="text-uppercase"><?= localized('proyectos_syasa'); ?></h1>
+				<h3 class="text-uppercase"><?= localized('proyectos_syasa'); ?></h3>
 				</div>
 			</div>
 			<div class="row justify-content-center mb-5 proyectos">
@@ -332,7 +288,7 @@
 		<div class="container proyectos proyectos_por_tipo mt-5">
 			<div class="row mb-4">
 				<div class="col-12 text-center">
-					<h2 class="text-capitalize" data-aos="fade-up"><?= localized('tipo_de_proyecto'); ?></h2>
+					<h4 class="text-uppercase" data-aos="fade-up"><?= localized('tipo_de_proyecto'); ?></h4>
 				</div>
 			</div>
 			<div class="row">
@@ -419,7 +375,7 @@
 		<div class="container">
 			<div class="row justify-content-between align-items-center mb-5">
 				<div class="col-lg-6 col-6">
-					<h2 class="text-uppercase"><?= localized('noticias_main_title'); ?></h2>
+					<h3 class="text-uppercase"><?= localized('noticias_main_title'); ?></h3>
 				</div>
 				<div class="col-lg-6 col-6 d-flex justify-content-end">
 					<a class="btn btn-primary" href="<?= site_url('noticias'); ?>"><?= localized('ver_mas_boton'); ?></a>
@@ -511,7 +467,7 @@
 			<div class="row php-email-form justify-content-center">
 				<div class="col-lg-3">
          			<div class="content">
-						<h2 class="text-uppercase"><?= localized('oportunidades_main_title'); ?></h2>
+						<h3 class="text-uppercase"><?= localized('oportunidades_main_title'); ?></h3>
 						<p><?= localized('oportunidades_text'); ?></p>
 					</div>
 				</div>

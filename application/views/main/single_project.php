@@ -52,10 +52,6 @@
 			</div>
 			<!-- Info -->
 			<div class="col-lg-5">
-				<!-- Project description -->
-				<div class="mb-4">
-					<?= $project->description; ?>
-				</div>
 				<!-- Info -->
 				<div class="project-info-table">
 					<div class="info">
@@ -83,6 +79,13 @@
 						<p><?= $project->location; ?></p>
 					</div>
 				</div>
+				<!-- Info -->
+				<hr>
+				<!-- Project description -->
+				<div class="mb-4">
+					<?= $project->description; ?>
+				</div>
+				<!-- Project description -->
 			</div>
 		</div>
 	</div>

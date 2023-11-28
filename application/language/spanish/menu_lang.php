@@ -4,5 +4,5 @@ $lang = [
     'about_us' => 'Nosotros',
     'projects' => 'Proyectos',
     'news' => 'Noticias',
-    'job_opportunities' => 'Oportunidades Laborales',
+    'job_opportunities' => 'Trabaja con nosotros',
 ];
