@@ -1,7 +1,7 @@
 <?php
 
 $lang = [
-    'job_opps_main_title' => 'Oportunidades Laborales',
+    'job_opps_main_title' => 'Trabaja con nosotros',
     'job_opps_last_name' => 'Apellidos',
     'job_opps_first_name' => 'Nombres',
     'job_opps_email' => 'Correo electrónico',

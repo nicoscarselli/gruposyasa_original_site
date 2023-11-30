@@ -34,7 +34,7 @@
 			<div class="row justify-content-between">
 				<div class="col-lg-4 d-flex align-items-center">
 					<div class="content" data-aos="fade-up">
-						<h2><?= localized('quienes_somos_title'); ?></h2>
+						<h3 class="text-uppercase"><?= localized('quienes_somos_title'); ?></h3>
 						<p><?= localized('quienes_somos_text'); ?></p>
 					</div>
 				</div>
@@ -46,22 +46,23 @@
 	</section>
 	<!-- ======= Nosotros Section ======= -->
 	<!-- ======= Que hacemos Section ======= -->
-	<section class="section-bg-primary">
+	<section class="section-bg-default">
 		<div class="container">
 			<div class="row justify-content-center text-center">
 				<div class="col-lg-12 align-items-center" >
-					<h2 class="text-white" data-aos="fade-up"><?= localized('que_hacemos_title'); ?></h2>
+					<h3 class="text-white" data-aos="fade-up"><?= localized('que_hacemos_title'); ?></h3>
 				</div>
 			</div>
 		</div>
 	</section>
 	<!-- ======= Que hacemos Section ======= -->
+
 	<!-- ======= Services Section ======= -->
 	<section class="services">
 		<div class="container">
 			<div class="row mb-5">
 				<div class="col-lg-12">
-					<h2><?= localized('servicios_main_title'); ?></h2>
+					<h3 class="text-uppercase"><?= localized('servicios_main_title'); ?></h3>
 				</div>
 			</div>
 			<div class="row gy-4">
@@ -133,15 +134,22 @@
 		</div>
 	</section>
 	<!-- End services Section -->
+
 	<!-- ======= valores Section ======= -->
-	<section id="valores" class="valores section-bg-secondary-light">
+	<section id="valores" class="valores section-bg-default">
 		<div class="container" >
+			<div class="row mb-5">
+				<div class="col-lg-12">
+					<h3 class="text-white text-uppercase"><?= localized('valores_main_title'); ?></h3>
+				</div>
+			</div>
 			<div class="row gy-4">
 				<div class="col-lg-4 col-md-6">
 					<div class="service-item position-relative" data-aos="fade-up" data-aos-delay="100">
 						<div class="icon">
 							<i class="fa-solid fa-shield-halved"></i>
 						</div>
+						<hr>
 						<h3><?= localized('valores_1_title'); ?></h3>
 						<p><?= localized('valores_1_text'); ?></p>
 					</div>
@@ -152,6 +160,7 @@
 						<div class="icon">
 							<i class="fa-solid fa-medal"></i>
 						</div>
+						<hr>
 						<h3><?= localized('valores_2_title'); ?></h3>
 						<p><?= localized('valores_2_text'); ?></p>
 					</div>
@@ -162,6 +171,7 @@
 						<div class="icon">
 							<i class="fa-solid fa-user-check"></i>
 						</div>
+						<hr>
 						<h3><?= localized('valores_3_title'); ?></h3>
 						<p><?= localized('valores_3_text'); ?></p>
 					</div>
@@ -172,6 +182,7 @@
 						<div class="icon">
 							<i class="fa-solid fa-user-group"></i>
 						</div>
+						<hr>
 						<h3><?= localized('valores_4_title'); ?></h3>
 						<p><?= localized('valores_4_text'); ?></p>
 					</div>
@@ -182,6 +193,7 @@
 						<div class="icon">
 							<i class="fa-solid fa-screwdriver-wrench"></i>
 						</div>
+						<hr>
 						<h3><?= localized('valores_5_title'); ?></h3>
 						<p><?= localized('valores_5_text'); ?></p>
 					</div>
@@ -192,6 +204,7 @@
 						<div class="icon">
 							<i class="fa-solid fa-globe-americas"></i>
 						</div>
+						<hr>
 						<h3><?= localized('valores_6_title'); ?></h3>
 						<p><?= localized('valores_6_text'); ?></p>
 					</div>
@@ -201,110 +214,81 @@
 		</div>
 	</section>
 	<!-- End valores Section -->
+
 	<!-- ======= Proyectos Section ======= -->
 	<section id="proyectos" class="proyectos">
 		<div class="container">
 			<div class="row mb-5">
 				<div class="col-12 text-center">
-					<h2><?= localized('proyectos_main_title'); ?></h2>
+					<h3 class="text-uppercase"><?= localized('proyectos_destacados'); ?></h3>
 				</div>
 			</div>
 			<div class="row portfolio-container">
 				<div class="owl-theme owl-carousel proyectos_destacados">
-					<div class="item">
-						<div class="portfolio-content">
-							<img src="<?= images_folder('proyectos/parque_lomas.png'); ?>" class="img-fluid" alt="">
-							<div class="portfolio-info">
-								<p>Parque Lomas-Vidalta</p>
-								<a class="ver-mas" href="<?= site_url('proyectos/proyecto/5'); ?>">Ver detalles</a>
+					<?php foreach($projects_outstanding as $project){ ?>
+						<div class="item">
+							<div class="portfolio-content">
+								<img src="https://www.gruposyasa.com/webpagedemo/project_files/<?php echo $project->id; echo '/'; echo $project->main_image;?>" 
+									class="img-fluid" alt="">
+								<div class="portfolio-info">
+									<div>
+										<h4><?php echo json_decode($project->categories[0]->name)->es; ?></h4>
+									</div>
+									<p><?= $project->name; ?></p>
+									<a class="ver-mas" href="<?= site_url('proyectos/proyecto/'.$project->id); ?>">Ver detalles</a>
+								</div>
 							</div>
 						</div>
-					</div>
-
-					<div class="item">
-						<div class="portfolio-content">
-							<img src="<?= images_folder('proyectos/town_square_metepec.png'); ?>" alt="">
-							<div class="portfolio-info">
-								<p>Town Square Metepec</p>
-								<a class="ver-mas" href="<?= site_url('proyectos/proyecto/142'); ?>">Ver detalles</a>
-							</div>
-						</div>
-					</div>
-
-					<div class="item">
-						<div class="portfolio-content">
-							<img src="<?= images_folder('proyectos/interlomas.png'); ?>" class="img-fluid" alt="">
-							<div class="portfolio-info">
-								<p>The Parallel Interlomas</p>
-								<a class="ver-mas" href="<?= site_url('proyectos/proyecto/32'); ?>">Ver detalles</a>
-							</div>
-						</div>
-					</div>
-
-					<div class="item">
-						<div class="portfolio-content">
-							<img src="<?= images_folder('proyectos/polanco.png'); ?>" class="img-fluid" alt="">
-							<div class="portfolio-info">
-								<p>Corporativo Punto Polanco</p>
-								<a class="ver-mas" href="<?= site_url('proyectos/proyecto/15'); ?>">Ver detalles</a>
-							</div>
-						</div>
-					</div>
-
-					<div class="item">
-						<div class="portfolio-content">
-							<img src="<?= images_folder('proyectos/privada14.png'); ?>" class="img-fluid" alt="">
-							<div class="portfolio-info">
-								<p>Residencial Privada 14</p>
-								<a class="ver-mas" href="<?= site_url('proyectos/proyecto/12'); ?>">Ver detalles</a>
-							</div>
-						</div>
-					</div>
-					
-					<div class="item">
-						<div class="portfolio-content">
-							<img src="<?= images_folder('proyectos/reserva.png'); ?>" class="img-fluid" alt="">
-							<div class="portfolio-info">
-								<p>Reserva Bezares</p>
-								<a class="ver-mas" href="<?= site_url('proyectos/proyecto/2'); ?>">Ver detalles</a>
-							</div>
-						</div>
-					</div>
+					<?php }?>
 				</div>
 			</div>
 		</div>
 	</section>
 
-	<section id="filtro_proyectos">
+	<div id="filtro_proyectos" class="mb-5">
 		<div class="container">
 			<div class="row mb-5">
 				<div class="col-12 text-center">
-					<h2 data-aos="fade-up"><?= localized('ubicacion'); ?></h2>
+				<h3 class="text-uppercase"><?= localized('proyectos_syasa'); ?></h3>
 				</div>
 			</div>
-			<div class="row">
-				<div class="col-lg-3 col-6 text-center mb-3" data-aos="fade-up">
-					<a href=""><img src="<?= images_folder('proyectos/paises/argentina.svg'); ?>" alt="" class="mb-3 w-25"></a>
+			<div class="row justify-content-center mb-5 proyectos">
+				<!-- Search bar -->
+				<div class="col-lg-6 col-12">
+					<div class="input-group">
+						<input type="text" class="form-control search-control" name="search" id="search" />
+						<span class="input-group-btn">
+							<button class="btn btn-secondary search-button" type="button">
+								<span class="bi bi-search"></span>
+							</button>
+						</span>
+					</div>
+				</div>
+				<!-- Search bar -->
+			</div>
+			<div class="row justify-content-center">
+				<div class="col-lg-2 col-6 text-center mb-3" data-aos="fade-up">
+					<a href="https://www.gruposyasa.com/webpagedemo/es/proyectos/region/1"><img src="<?= images_folder('proyectos/paises/argentina.svg'); ?>" alt="" class="mb-3 w-50"></a>
 					<h5><?= localized('argentina'); ?></h5>
 				</div>
-				<div class="col-lg-3 col-6 text-center mb-3" data-aos="fade-up" data-aos-delay="100">
-					<a href=""><img src="<?= images_folder('proyectos/paises/mexico.svg'); ?>" alt="" class="mb-3 w-25"></a>
+				<div class="col-lg-2 col-6 text-center mb-3" data-aos="fade-up" data-aos-delay="100">
+					<a href="https://www.gruposyasa.com/webpagedemo/es/proyectos/region/2"><img src="<?= images_folder('proyectos/paises/mexico.svg'); ?>" alt="" class="mb-3 w-50"></a>
 					<h5><?= localized('mexico'); ?></h5> 
 				</div>
-				<div class="col-lg-3 col-6 text-center mb-3" data-aos="fade-up" data-aos-delay="200">
-					<a href=""><img src="<?= images_folder('proyectos/paises/panama.svg'); ?>" alt="" class="mb-3 w-25"></a>
+				<div class="col-lg-2 col-6 text-center mb-3" data-aos="fade-up" data-aos-delay="200">
+					<a href="https://www.gruposyasa.com/webpagedemo/es/proyectos/region/3"><img src="<?= images_folder('proyectos/paises/panama.svg'); ?>" alt="" class="mb-3 w-50"></a>
 					<h5><?= localized('panama'); ?></h5> 
 				</div>
-				<div class="col-lg-3 col-6 text-center mb-3" data-aos="fade-up" data-aos-delay="300">
-					<a href=""><img src="<?= images_folder('proyectos/paises/otros.svg'); ?>" alt="" class="mb-3 w-25"></a>
+				<div class="col-lg-2 col-6 text-center mb-3" data-aos="fade-up" data-aos-delay="300">
+					<a href="https://www.gruposyasa.com/webpagedemo/es/proyectos/region/4"><img src="<?= images_folder('proyectos/paises/otros.svg'); ?>" alt="" class="mb-3 w-50"></a>
 					<h5><?= localized('otro_pais'); ?></h5> 
 				</div>
 			</div>
 		</div>
 		<div class="container proyectos proyectos_por_tipo mt-5">
-			<div class="row mb-5">
+			<div class="row mb-4">
 				<div class="col-12 text-center">
-					<h2 data-aos="fade-up"><?= localized('tipo_de_proyecto'); ?></h2>
+					<h4 class="text-uppercase" data-aos="fade-up"><?= localized('tipo_de_proyecto'); ?></h4>
 				</div>
 			</div>
 			<div class="row">
@@ -312,7 +296,7 @@
 					<div class="proyectos_por_tipo" data-aos="fade-up">
 						<img src="<?= images_folder('proyectos/tipos/aeropuertos.png'); ?>" class="img-fluid" alt="">
 						<div class="proyectos_por_tipo-info">
-							<a href=""><h5><?= localized('aeropuertos'); ?></h5></a>
+							<a href="https://www.gruposyasa.com/webpagedemo/es/proyectos/categoria/1"><h5><?= localized('aeropuertos'); ?></h5></a>
 						</div>
 					</div>
 				</div>
@@ -320,7 +304,7 @@
 					<div class="proyectos_por_tipo" data-aos="fade-up" data-aos-delay="100">
 						<img src="<?= images_folder('proyectos/tipos/bancarios.png'); ?>" class="img-fluid" alt="">
 						<div class="proyectos_por_tipo-info">
-							<a href=""><h5><?= localized('bancarios'); ?></h5></a>
+							<a href="https://www.gruposyasa.com/webpagedemo/es/proyectos/categoria/2"><h5><?= localized('bancarios'); ?></h5></a>
 						</div>
 					</div>
 				</div>
@@ -328,7 +312,7 @@
 					<div class="proyectos_por_tipo" data-aos="fade-up" data-aos-delay="200">
 						<img src="<?= images_folder('proyectos/tipos/centros_comerciales.png'); ?>" class="img-fluid" alt="">
 						<div class="proyectos_por_tipo-info">
-							<a href=""><h5><?= localized('centros'); ?></h5></a>
+							<a href="https://www.gruposyasa.com/webpagedemo/es/proyectos/categoria/3"><h5><?= localized('centros'); ?></h5></a>
 						</div>
 					</div>
 				</div>
@@ -336,7 +320,7 @@
 					<div class="proyectos_por_tipo" data-aos="fade-up" data-aos-delay="300">
 						<img src="<?= images_folder('proyectos/tipos/hospitales.png'); ?>" class="img-fluid" alt="">
 						<div class="proyectos_por_tipo-info">
-							<a href=""><h5><?= localized('hospitales'); ?></h5></a>
+							<a href="https://www.gruposyasa.com/webpagedemo/es/proyectos/categoria/4"><h5><?= localized('hospitales'); ?></h5></a>
 						</div>
 					</div>
 				</div>
@@ -344,7 +328,7 @@
 					<div class="proyectos_por_tipo" data-aos="fade-up" data-aos-delay="400">
 						<img src="<?= images_folder('proyectos/tipos/hoteles.png'); ?>" class="img-fluid" alt="">
 						<div class="proyectos_por_tipo-info">
-							<a href=""><h5><?= localized('hoteles'); ?></h5></a>
+							<a href="https://www.gruposyasa.com/webpagedemo/es/proyectos/categoria/5"><h5><?= localized('hoteles'); ?></h5></a>
 						</div>
 					</div>
 				</div>
@@ -352,7 +336,7 @@
 					<div class="proyectos_por_tipo" data-aos="fade-up" data-aos-delay="500">
 						<img src="<?= images_folder('proyectos/tipos/leed.png'); ?>" class="img-fluid" alt="">
 						<div class="proyectos_por_tipo-info">
-							<a href=""><h5><?= localized('leed'); ?></h5></a>
+							<a href="https://www.gruposyasa.com/webpagedemo/es/proyectos/categoria/6"><h5><?= localized('leed'); ?></h5></a>
 						</div>
 					</div>
 				</div>
@@ -360,7 +344,7 @@
 					<div class="proyectos_por_tipo" data-aos="fade-up" data-aos-delay="600">
 						<img src="<?= images_folder('proyectos/tipos/oficinas.png'); ?>" class="img-fluid" alt="">
 						<div class="proyectos_por_tipo-info">
-							<a href=""><h5><?= localized('oficinas'); ?></h5></a>
+							<a href="https://www.gruposyasa.com/webpagedemo/es/proyectos/categoria/7"><h5><?= localized('oficinas'); ?></h5></a>
 						</div>
 					</div>
 				</div>
@@ -368,7 +352,7 @@
 					<div class="proyectos_por_tipo" data-aos="fade-up" data-aos-delay="700">
 						<img src="<?= images_folder('proyectos/tipos/residenciales.png'); ?>" class="img-fluid" alt="">
 						<div class="proyectos_por_tipo-info">
-							<a href=""><h5><?= localized('residenciales'); ?></h5></a>
+							<a href="https://www.gruposyasa.com/webpagedemo/es/proyectos/categoria/8"><h5><?= localized('residenciales'); ?></h5></a>
 						</div>
 					</div>
 				</div>
@@ -376,21 +360,22 @@
 					<div class="proyectos_por_tipo" data-aos="fade-up" data-aos-delay="800">
 						<img src="<?= images_folder('proyectos/tipos/otros.png'); ?>" class="img-fluid" alt="">
 						<div class="proyectos_por_tipo-info">
-							<a href=""><h5><?= localized('otros'); ?></h5></a>
+							<a href="https://www.gruposyasa.com/webpagedemo/es/proyectos/categoria/9"><h5><?= localized('otros'); ?></h5></a>
 						</div>
 					</div>
 				</div>
 			</div>
 		</div>
-	</section>
+	</div>
 	<!-- End proyectos Section -->
+
 	<!-- ======= Recent Blog Posts Section ======= -->
 	<?php /** @var News[] $news **/ ?>
 	<section id="news-posts" class="section-bg-secondary-light news-posts">
 		<div class="container">
 			<div class="row justify-content-between align-items-center mb-5">
 				<div class="col-lg-6 col-6">
-					<h2><?= localized('noticias_main_title'); ?></h2>
+					<h3 class="text-uppercase"><?= localized('noticias_main_title'); ?></h3>
 				</div>
 				<div class="col-lg-6 col-6 d-flex justify-content-end">
 					<a class="btn btn-primary" href="<?= site_url('noticias'); ?>"><?= localized('ver_mas_boton'); ?></a>
@@ -407,7 +392,6 @@
 							</div>
 							<div class="post-content d-flex flex-column">
 								<h3 class="post-title"><?= $item->title; ?></h3>
-								<hr>
 								<a href="<?= $item->file(); ?>" class="readmore stretched-link" target="_blank"><?= localized('view_pdf'); ?></a>
 							</div>
 						</div>
@@ -418,6 +402,7 @@
 		</div>
 	</section>
 	<!-- End Recent Blog Posts Section -->
+
 	<!-- ======= Oportunidades Section ======= -->
 	<?php
 		/**
@@ -482,7 +467,7 @@
 			<div class="row php-email-form justify-content-center">
 				<div class="col-lg-3">
          			<div class="content">
-						<h2><?= localized('oportunidades_main_title'); ?></h2>
+						<h3 class="text-uppercase"><?= localized('oportunidades_main_title'); ?></h3>
 						<p><?= localized('oportunidades_text'); ?></p>
 					</div>
 				</div>

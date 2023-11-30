@@ -4,5 +4,5 @@ $lang = [
 	'about_us'                => 'About Us',
 	'projects'                	=> 'Projects',
 	'news'                    	=> 'News',
-	'job_opportunities' 			=> 'Job Opportunities',
+	'job_opportunities' 			=> 'Work with Us',
 ];

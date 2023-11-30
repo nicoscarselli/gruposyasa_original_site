@@ -25,7 +25,6 @@
                 </div>
                 <div class="post-content d-flex flex-column">
                 <h3 class="post-title"><?= $item->title; ?></h3>
-                <hr>
                 <a href="<?= $item->file(); ?>" class="readmore stretched-link" target="_blank"><?= localized('view_pdf'); ?></a>
                 </div>
             </div>

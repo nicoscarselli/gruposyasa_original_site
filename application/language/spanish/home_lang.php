@@ -2,23 +2,27 @@
 $lang = [
     /* HERO */
     'hero_title' => 'Gestionamos negocios para construir tus sueños',
-    'hero_text' => 'Ganando reputación en la industria por responder a los desafíos más difíciles para entregar proyectos galardonados.',
+    'hero_text' => 'Somos expertos en ejecutar proyectos complejos y galardonados.',
 
     'hero_title_2' => 'Los retos nos inspiran',
-    'hero_text_2' => 'Mas de 20 años de experiencia nos respaldan para abordar cualquier tipo de reto y desafío.',
+    'hero_text_2' => 'Más de 20 años nos respaldan para afrontar cualquier tipo de proyecto y desafío.',
 
     'hero_title_3' => 'Asumimos riesgos',
-    'hero_text_3' => 'Para capitalizar y optimizar recursos y maximizar resultados.',
+    'hero_text_3' => 'Para capitalizar y optimizar recursos y maximizar los resultados.',
     /* HERO */
 
     /* QUIENES SOMOS */
-    'quienes_somos_title' => 'Quienes somos',
-    'quienes_somos_text' => '<p>Somos una empresa líder en ingeniería, que gestiona proyectos inmobiliarios, industriales y de infraestructura en Latinoamérica.</p> <p>frecemos soluciones personalizadas y de calidad para cualquier tipo de proyecto, con tecnología avanzada y respeto por el pasado.</p> <p>Utilizamos el “Construction Management”, donde se fomenta el diálogo y la organización integrada de todos los actores.</p>',
+    'quienes_somos_title' => 'Nosotros',
+    'quienes_somos_text' => '<p>Somos una empresa líder en ingeniería, que gestiona proyectos inmobiliarios, industriales y de infraestructura en Latinoamérica.</p> <p>Ofrecemos soluciones personalizadas y de calidad para cualquier tipo de proyecto, con tecnología avanzada y respeto por el pasado.</p> <p>Utilizamos el “Construction Management”, donde se fomenta el diálogo y la organización integrada de todos los actores.</p>',
     /* QUIENES SOMOS */
 
     /* QUE HACEMOS */
     'que_hacemos_title' => 'Brindamos servicios de gerenciamiento de proyecto en Latinoamérica. Aplicamos las tecnologías más sofisticadas en materia de ingeniería, pero -al mismo tiempo- reivindicamos la excelencia en la tarea artesanal.',
     /* QUE HACEMOS */
+
+    /* VALORES */
+    'valores_main_title' => 'Nuestros Valores',
+    /* VALORES */
 
     /* SERVICIOS */
     'servicios_main_title' => 'Nuestros Servicios',
@@ -57,7 +61,8 @@ $lang = [
     /* VALORES */
 
     /* PROYECTOS */
-    'proyectos_main_title' => 'Proyectos Destacados',
+    'proyectos_destacados' => 'Proyectos Destacados',
+    'proyectos_syasa' => 'Proyectos Syasa',
 
     'ubicacion' => 'Ubicación',
     'argentina' => 'Argentina',
@@ -78,11 +83,11 @@ $lang = [
     /* PROYECTOS */
 
     /* NOTICIAS */
-    'noticias_main_title' => 'Últimas Noticias',
+    'noticias_main_title' => 'Novedades',
     /* NOTICIAS */
 
     /* OPORTUNIDADES LABORALES */
-    'oportunidades_main_title' => 'Oportunidades Laborales',
+    'oportunidades_main_title' => 'TRABAJA CON NOSOTROS',
     'oportunidades_text' => 'Completa el formulario para que conozcamos tu experiencia.',
     /* OPORTUNIDADES LABORALES */
 

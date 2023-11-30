@@ -7,7 +7,7 @@
         <span></span>
         </label>
         <ul class="menu__box">
-            <li><a class="menu__item" href="<?= site_url(); ?>">><?= localized('home'); ?></a></li>
+            <li><a class="menu__item" href="<?= site_url('admin'); ?>"><?= localized('home'); ?></a></li>
             <li><a class="menu__item" href="<?= site_url('admin/proyectos'); ?>">Proyectos</a></li>
             <?php if ($this->session->user_type == User::USER_TYPE_SUPERADMIN): ?>
             <li><a class="menu__item" href="<?= site_url('admin/noticias'); ?>">Noticias</a></li>
