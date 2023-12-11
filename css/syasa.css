@@ -232,9 +232,9 @@ section .videoWrapper iframe {
   color: white;
 }
 
-@media (max-width: 768px) {
+@media (max-width: 1280px) {
   .breadcrumbs {
-    min-height: 30vh;
+    min-height: 50vh;
     padding: 64px 24px 32px 24px;
   }
 
@@ -407,6 +407,9 @@ section .videoWrapper iframe {
   --------------------------------------------------------------*/
   #menu__toggle {
     opacity: 0;
+    position: fixed;
+    top: 24px;
+    right: 24px;
   }
   
   #menu__toggle:checked ~ .menu__btn > span {
@@ -438,6 +441,7 @@ section .videoWrapper iframe {
     height: 64px;
     cursor: pointer;
     z-index: 999;
+    box-shadow: 0px 0px 16px rgba(0, 0, 0, 0.2);
   }
   
   .menu__btn > span,
@@ -463,22 +467,22 @@ section .videoWrapper iframe {
     display: block;
     position: fixed;
     visibility: hidden;
-    top: 0;
+    top: 108px;
     right: -100%;
     width: 240px;
     height: auto;
     margin: 0;
-    padding: 80px 0 40px 0px;
+    padding: 24px 0px;
     list-style: none;
     background-color: var(--color-default);
-    box-shadow: 8px 8px 8px rgba(0, 0, 0, .5);
+    box-shadow: 0px 16px 24px rgba(0, 0, 0, .5);
     transition-duration: .35s;
     z-index: 998;
   }
   
   .menu__item {
     display: block;
-    padding: 16px;
+    padding: 16px 24px;
     color: var(--color-secondary-light);
     font-family: var(--font-primary);
     font-size: 16px;
@@ -502,7 +506,12 @@ section .videoWrapper iframe {
     right: 16px;
     width: 48px;
     height: 48px;
-}
+  }
+
+  .menu__box {
+    top: 0px;
+    width: 328px;
+  }
 }
 
 /*--------------------------------------------------------------
@@ -770,14 +779,14 @@ section .videoWrapper iframe {
 }
 
 .services .card-item .card-bg {
-  min-height: 300px;
+  min-height: 252px;
   background-size: cover;
   background-position: center;
   background-repeat: no-repeat;
 }
 
 .services .card-item .card-body {
-  padding: 18px;
+  padding: 0px 18px 0px 0px;
 }
 
 .services .card-item h4 {
@@ -786,15 +795,19 @@ section .videoWrapper iframe {
   margin-bottom: 15px;
 }
 
-.services .card-item p {
-  margin: 0;
+@media (max-width: 768px) {
+  .services .card-item .card-body {
+    padding: 18px;
+  }
 }
+
+
 
 /*--------------------------------------------------------------
   # valores Section
   --------------------------------------------------------------*/
 .valores .service-item {
-  padding: 32px;
+  padding: 24px;
   background: #fff;
   height: 100%;
 }
@@ -1024,9 +1037,6 @@ section .videoWrapper iframe {
   padding: 1rem;
 }
 
-.carousel-project-item {
-  padding: 0 1rem;
-}
 .carousel-project-item .image {
   margin-bottom: 1rem;
 }
@@ -1080,7 +1090,7 @@ section .videoWrapper iframe {
 }
 
 .job_opportunities .php-email-form .form-group {
-  padding-bottom: 24px;
+  padding-bottom: 16px;
 }
 
 .job_opportunities .php-email-form .error-message {
@@ -1126,7 +1136,7 @@ section .videoWrapper iframe {
 
 .job_opportunities .php-email-form label {
   font-size: 12px;
-  margin-bottom: 8px;
+  margin-bottom: 2px;
 }
 
 .job_opportunities .php-email-form input:focus,
@@ -1138,7 +1148,7 @@ section .videoWrapper iframe {
   box-shadow: 0px 5px 5px (0,0,0,0.5) !important;
   border: 1px solid var(--color-default) !important;
   border-radius: 8px !important;
-  padding: 8px !important;
+  padding: 4px !important;
   line-height: 2 !important;
   font-size: 14px !important;
 }

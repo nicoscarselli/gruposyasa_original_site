@@ -69,10 +69,10 @@
 				<div class="col-lg-6" data-aos="fade-up" data-aos-delay="100">
 					<div class="card-item">
 						<div class="row">
-							<div class="col-xl-5">
+							<div class="col-xl-4">
 								<div class="card-bg" style="background-image: url(<?= images_folder('nosotros/img_construction_man.png'); ?>);"></div>
 							</div>
-							<div class="col-xl-7 d-flex align-items-center">
+							<div class="col-xl-8 d-flex align-items-center">
 								<div class="card-body">
 									<h4 class="card-title"><?= localized('servicio_1_title'); ?></h4>
 									<p><?= localized('servicio_1_text'); ?></p>
@@ -85,10 +85,10 @@
 				<div class="col-lg-6" data-aos="fade-up" data-aos-delay="200">
 					<div class="card-item">
 						<div class="row">
-							<div class="col-xl-5">
+							<div class="col-xl-4">
 								<div class="card-bg" style="background-image: url(<?= images_folder('nosotros/img_leed.png'); ?>);"></div>
 							</div>
-							<div class="col-xl-7 d-flex align-items-center">
+							<div class="col-xl-8 d-flex align-items-center">
 								<div class="card-body">
 									<h4 class="card-title"><?= localized('servicio_2_title'); ?></h4>
 									<p><?= localized('servicio_2_text'); ?></p>
@@ -101,10 +101,10 @@
 				<div class="col-lg-6" data-aos="fade-up" data-aos-delay="300">
 					<div class="card-item">
 						<div class="row">
-							<div class="col-xl-5">
+							<div class="col-xl-4">
 								<div class="card-bg" style="background-image: url(<?= images_folder('nosotros/img_due.png'); ?>);"></div>
 							</div>
-							<div class="col-xl-7 d-flex align-items-center">
+							<div class="col-xl-8 d-flex align-items-center">
 								<div class="card-body">
 									<h4 class="card-title"><?= localized('servicio_3_title'); ?></h4>
 									<p><?= localized('servicio_3_text'); ?></p>
@@ -117,10 +117,10 @@
 				<div class="col-lg-6" data-aos="fade-up" data-aos-delay="400">
 					<div class="card-item">
 						<div class="row">
-							<div class="col-xl-5">
+							<div class="col-xl-4">
 								<div class="card-bg" style="background-image: url(<?= images_folder('nosotros/img_pre_const.png'); ?>);"></div>
 							</div>
-							<div class="col-xl-7 d-flex align-items-center">
+							<div class="col-xl-8 d-flex align-items-center">
 								<div class="card-body">
 									<h4 class="card-title"><?= localized('servicio_4_title'); ?></h4>
 									<p><?= localized('servicio_4_text'); ?></p>
@@ -235,7 +235,7 @@
 										<h4><?php echo json_decode($project->categories[0]->name)->es; ?></h4>
 									</div>
 									<p><?= $project->name; ?></p>
-									<a class="ver-mas" href="<?= site_url('proyectos/proyecto/'.$project->id); ?>">Ver detalles</a>
+									<a class="ver-mas" href="<?= site_url('proyectos/proyecto/'.$project->id); ?>"><?= localized('ver_detalles'); ?></a>
 								</div>
 							</div>
 						</div>

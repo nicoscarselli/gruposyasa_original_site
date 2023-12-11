@@ -7,5 +7,7 @@ $lang = [
 	'related_projects' => 'Similar Projects',
 	'photo_gallery'    => 'Gallery',
 
-	'projects_title' => 'Projects'
+	'projects_title' => 'Projects',
+
+	'ver_detalles' => 'View Details'
 ];

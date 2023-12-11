@@ -50,8 +50,7 @@ $es = strpos($lang, "es", 0);
                             <h4><?php echo json_decode($project->categories[0]->name)->es; ?></h4>
                         </div>
                         <p><?php echo $project->name; ?></p><a class="ver-mas"
-                            href="https://www.gruposyasa.com/webpagedemo/proyectos/proyecto/<?php echo $project->id; ?>">Ver
-                            detalles</a>
+                            href="https://www.gruposyasa.com/webpagedemo/proyectos/proyecto/<?php echo $project->id; ?>"><?= localized('ver_detalles'); ?></a>
                     </div>
                 </div>
             </div>

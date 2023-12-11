@@ -19,7 +19,7 @@
 		<div class="row justify-content-between">
 			<!-- Gallery -->
 			<div class="col-lg-6">
-				<div class="owl-carousel owl-theme photos-gallery">
+				<div class="owl-theme owl-carousel photos-gallery ">
 					<?php foreach ( $project_media as $media ): ?>
 					<div class="item">
 						<?php if ( is_a($media, Project_image::class) ): ?>
@@ -99,7 +99,7 @@
 			</div>
 		</div>
 		<div class="row portfolio-container">
-			<div class="owl-theme owl-carousel">
+			<div class="owl-theme owl-carousel proyectos-similares">
 				<?php foreach ( $related_projects as $related_project ): ?>
 				<?php
 					$project_url = site_url('proyectos/proyecto/' . $related_project->id);
@@ -113,7 +113,7 @@
 							<h4><?= $category->localize('name'); ?></h4>
 							<?php endforeach; ?>
 							<p><?= $related_project->name; ?></p>
-							<a class="ver-mas" href="<?= $project_url ?>">Ver detalles</a>
+							<a class="ver-mas" href="<?= $project_url ?>"><?= localized('ver_detalles'); ?></a>
 						</div>
 					</div>
 				</div>

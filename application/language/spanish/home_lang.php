@@ -13,7 +13,7 @@ $lang = [
 
     /* QUIENES SOMOS */
     'quienes_somos_title' => 'Nosotros',
-    'quienes_somos_text' => '<p>Somos una empresa líder en ingeniería, que gestiona proyectos inmobiliarios, industriales y de infraestructura en Latinoamérica.</p> <p>Ofrecemos soluciones personalizadas y de calidad para cualquier tipo de proyecto, con tecnología avanzada y respeto por el pasado.</p> <p>Utilizamos el “Construction Management”, donde se fomenta el diálogo y la organización integrada de todos los actores.</p>',
+    'quienes_somos_text' => 'Somos una empresa líder en ingeniería, que gestiona proyectos inmobiliarios, industriales y de infraestructura en Latinoamérica. Ofrecemos soluciones personalizadas y de calidad para cualquier tipo de proyecto, con tecnología avanzada y respeto por el pasado. Utilizamos el “Construction Management”, donde se fomenta el diálogo y la organización integrada de todos los actores.',
     /* QUIENES SOMOS */
 
     /* QUE HACEMOS */
@@ -28,36 +28,36 @@ $lang = [
     'servicios_main_title' => 'Nuestros Servicios',
 
     'servicio_1_title' => 'Construction Management',
-    'servicio_1_text' => '<p>Promovemos el diálogo directo y una organización integrada con participación simultánea de todos los actores (proyectista, cliente, constructor) en las decisiones. Nuestra visión global y multidisciplinaria previene conflictos o inconvenientes.</p>',
+    'servicio_1_text' => 'Promovemos el diálogo directo y una organización integrada con participación simultánea de todos los actores (proyectista, cliente, constructor) en las decisiones. Nuestra visión global y multidisciplinaria previene conflictos o inconvenientes.',
 
     'servicio_2_title' => 'Procesos LEED',
-    'servicio_2_text' => '<p>Coordinamos al equipo interdisciplinario en la etapa administrativa y de obra para optimizar tiempos y esfuerzos en el proceso de certificación LEED. Contamos con experiencia en varios proyectos importantes en Latinoamérica.</p>',
+    'servicio_2_text' => 'Coordinamos al equipo interdisciplinario en la etapa administrativa y de obra para optimizar tiempos y esfuerzos en el proceso de certificación LEED. Contamos con experiencia en varios proyectos importantes en Latinoamérica.',
 
     'servicio_3_title' => 'Due Diligence',
-    'servicio_3_text' => '<p>Grupo SYASA asesora a desarrolladores y clientes para evaluar y planificar cada proyecto, maximizando el retorno de la inversión. Hacemos las evaluaciones de impacto, los presupuestos, los flujos de caja y la programación para el análisis detallado del proyecto.</p>',
+    'servicio_3_text' => 'Grupo SYASA asesora a desarrolladores y clientes para evaluar y planificar cada proyecto, maximizando el retorno de la inversión. Hacemos las evaluaciones de impacto, los presupuestos, los flujos de caja y la programación para el análisis detallado del proyecto.',
 
     'servicio_4_title' => 'Pre Construcción',
-    'servicio_4_text' => '<p>SYASA brinda servicios de pre construcción que optimizan recursos y costos. Nuestro equipo toma decisiones clave al inicio del proyecto, prepara la programación, los presupuestos, las proyecciones de caja y selecciona los recursos más convenientes.</p>',
+    'servicio_4_text' => 'SYASA brinda servicios de pre construcción que optimizan recursos y costos. Nuestro equipo toma decisiones clave al inicio del proyecto, prepara la programación, los presupuestos, las proyecciones de caja y selecciona los recursos más convenientes.',
     /* SERVICIOS */
 
     /* VALORES */
     'valores_1_title' => 'Seguridad',
-    'valores_1_text' => '<p>Comprometidos a mantener un entorno seguro y saludable en todas nuestras oficinas y en cada uno de nuestros proyectos.</p>',
+    'valores_1_text' => 'Comprometidos a mantener un entorno seguro y saludable en todas nuestras oficinas y en cada uno de nuestros proyectos.',
 
     'valores_2_title' => 'Calidad',
-    'valores_2_text' => '<p>Cumplimos con los requisitos mutuamente acordados la primera vez y nos esforzamos por la mejora de nuestros procesos de trabajo.</p>',
+    'valores_2_text' => 'Cumplimos con los requisitos mutuamente acordados la primera vez y nos esforzamos por la mejora de nuestros procesos de trabajo.',
 
     'valores_3_title' => 'Integridad',
-    'valores_3_text' => '<p>Mantenemos nuestra reputación de integridad en el mercado y ofrecemos un entorno de trabajo ético para todos nuestros empleados</p>',
+    'valores_3_text' => 'Mantenemos nuestra reputación de integridad en el mercado y ofrecemos un entorno de trabajo ético para todos nuestros empleados',
 
     'valores_4_title' => 'Diversidad',
-    'valores_4_text' => '<p>Aprovechamos la diversidad a través de la inclusión de empleados, empoderándolos para dar forma al futuro de la corporación.</p>',
+    'valores_4_text' => 'Aprovechamos la diversidad a través de la inclusión de empleados, empoderándolos para dar forma al futuro de la corporación.',
 
     'valores_5_title' => 'Innovación',
-    'valores_5_text' => '<p>Fomentamos entornos de trabajo creativos donde siempre nos desafiamos a nosotros mismos para mejorar nuestros procesos.</p>',
+    'valores_5_text' => 'Fomentamos entornos de trabajo creativos donde siempre nos desafiamos a nosotros mismos para mejorar nuestros procesos.',
 
     'valores_6_title' => 'Sustentabilidad',
-    'valores_6_text' => '<p>Ayudamos a nuestros clientes a hacer lo mismo al proporcionar soluciones limpias, eficientes y saludables en nuestros proyectos.</p>',
+    'valores_6_text' => 'Ayudamos a nuestros clientes a hacer lo mismo al proporcionar soluciones limpias, eficientes y saludables en nuestros proyectos.',
     /* VALORES */
 
     /* PROYECTOS */
@@ -68,7 +68,7 @@ $lang = [
     'argentina' => 'Argentina',
     'mexico' => 'México',
     'panama' => 'Panamá',
-    'otro_pais' => 'Otros',
+    'otro_pais' => 'Otros Paises',
 
     'tipo_de_proyecto' => 'Tipo de proyecto',
     'aeropuertos' => 'AEROPUERTOS',
@@ -79,7 +79,7 @@ $lang = [
     'leed' => 'LEED',
     'oficinas' => 'OFICINAS',
     'residenciales' => 'RESIDENCIALES',
-    'otros' => 'OTROS',
+    'otros' => 'OTROS PROYECTOS',
     /* PROYECTOS */
 
     /* NOTICIAS */
