@@ -42,22 +42,22 @@ $lang = [
 
     /* VALORES */
     'valores_1_title' => 'Seguridad',
-    'valores_1_text' => 'Comprometidos a mantener un entorno seguro y saludable en todas nuestras oficinas y en cada uno de nuestros proyectos.',
+    'valores_1_text' => 'Nuestra prioridad es preservar un entorno seguro y saludable en todas nuestras oficinas y en cada uno de nuestros proyectos.',
 
     'valores_2_title' => 'Calidad',
-    'valores_2_text' => 'Cumplimos con los requisitos mutuamente acordados la primera vez y nos esforzamos por la mejora de nuestros procesos de trabajo.',
+    'valores_2_text' => 'Garantizamos la satisfacción de nuestros clientes desde el inicio, cumpliendo los requisitos pactados y mejorando nuestros procesos constantemente.',
 
     'valores_3_title' => 'Integridad',
-    'valores_3_text' => 'Mantenemos nuestra reputación de integridad en el mercado y ofrecemos un entorno de trabajo ético para todos nuestros empleados',
+    'valores_3_text' => 'Nos distinguimos por nuestra integridad en el mercado y brindamos un entorno de trabajo ético para todos nuestros empleados.',
 
     'valores_4_title' => 'Diversidad',
-    'valores_4_text' => 'Aprovechamos la diversidad a través de la inclusión de empleados, empoderándolos para dar forma al futuro de la corporación.',
+    'valores_4_text' => 'Valoramos la diversidad mediante la inclusión de empleados, dándoles la oportunidad de participar en el futuro de la corporación.',
 
     'valores_5_title' => 'Innovación',
-    'valores_5_text' => 'Fomentamos entornos de trabajo creativos donde siempre nos desafiamos a nosotros mismos para mejorar nuestros procesos.',
+    'valores_5_text' => 'Promovemos entornos de trabajo innovadores donde siempre nos retamos a nosotros mismos para optimizar nuestros procesos.',
 
     'valores_6_title' => 'Sustentabilidad',
-    'valores_6_text' => 'Ayudamos a nuestros clientes a hacer lo mismo al proporcionar soluciones limpias, eficientes y saludables en nuestros proyectos.',
+    'valores_6_text' => 'Colaboramos con nuestros clientes para contribuir al mismo objetivo, ofreciendo soluciones limpias, eficientes y saludables en nuestros proyectos.',
     /* VALORES */
 
     /* PROYECTOS */
