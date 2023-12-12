@@ -3,7 +3,7 @@
             <div class="footer-content position-relative">
             <div class="container">
                 <div class="row">
-                <div class="col-lg-4 footer-links">
+                <div class="col-lg-4 col-md-4 footer-links">
                     <h3>Argentina</h3>
                     <ul>
                     <li>Av. Presidente Roque Saenz Peña 628 - Piso 7, C1035AAO - C.A.B.A</li>
@@ -13,7 +13,7 @@
                     </ul>
                 </div><!-- End footer links column-->
 
-                <div class="col-lg-4 footer-links">
+                <div class="col-lg-4 col-md-4 footer-links">
                     <h3>México</h3>
                     <ul>
                     <li>Homero 1804, Interior 1303, Col. Los Morales sección Palmas CP 11540 - Del. Miguel Hidalgo Ciudad de México</li>
@@ -22,7 +22,7 @@
                     </ul>
                 </div><!-- End footer links column-->
 
-                <div class="col-lg-4 footer-links">
+                <div class="col-lg-4 col-md-4 footer-links">
                     <h3>Colombia</h3>
                     <ul>
                     <li>Cra 1 No 70-35 Ap 304, CP 110221, Bogotá</li>
@@ -38,11 +38,11 @@
             <div class="footer-legal">
             <div class="container">
                 <div class="row justify-content-between copyright">
-                <div class="col-lg-9">
+                <div class="col-lg-9 col-md-6">
                     <?php $now = new DateTime(); ?>
                     <a href="<?= site_url('aviso_de_privacidad'); ?>">Aviso de Privacidad</a> | <?= localized('copyright', ['year' => $now->format('Y')]); ?>
                 </div>
-                <div class="col-lg-3">
+                <div class="col-lg-3 col-md-6">
                     <div class="social-links">
                     <a href="https://www.instagram.com/grupo.syasa/" class="d-flex align-items-center justify-content-center instagram" target="_blank"><i class="bi bi-instagram"></i></a>
                     <a href="https://www.linkedin.com/company/syasa/" class="d-flex align-items-center justify-content-center linkedin" target="_blank"><i class="bi bi-linkedin"></i></i></a>

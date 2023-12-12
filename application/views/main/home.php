@@ -31,14 +31,14 @@
 	<!-- ======= Nosotros Section ======= -->
 	<section id="nosotros" class="nosotros section-bg-primary-light">
 		<div class="container">
-			<div class="row justify-content-between">
-				<div class="col-lg-4 d-flex align-items-center">
+			<div class="row justify-content-between align-items-center">
+				<div class="col-lg-4 col-md-6 d-flex align-items-center">
 					<div class="content" data-aos="fade-up">
 						<h3 class="text-uppercase"><?= localized('quienes_somos_title'); ?></h3>
 						<p><?= localized('quienes_somos_text'); ?></p>
 					</div>
 				</div>
-				<div class="col-lg-6">
+				<div class="col-lg-6 col-md-6">
 					<img src="<?= images_folder('nosotros/nosotros_img_1.png'); ?>" alt="Grupo Syasa" class="img-fluid" data-aos="fade-up" data-aos-delay="200">
 				</div>
 			</div>
@@ -69,10 +69,10 @@
 				<div class="col-lg-6" data-aos="fade-up" data-aos-delay="100">
 					<div class="card-item">
 						<div class="row">
-							<div class="col-xl-4">
+							<div class="col-xl-4 col-md-4">
 								<div class="card-bg" style="background-image: url(<?= images_folder('nosotros/img_construction_man.png'); ?>);"></div>
 							</div>
-							<div class="col-xl-8 d-flex align-items-center">
+							<div class="col-xl-8 col-md-8 d-flex align-items-center">
 								<div class="card-body">
 									<h4 class="card-title"><?= localized('servicio_1_title'); ?></h4>
 									<p><?= localized('servicio_1_text'); ?></p>
@@ -85,10 +85,10 @@
 				<div class="col-lg-6" data-aos="fade-up" data-aos-delay="200">
 					<div class="card-item">
 						<div class="row">
-							<div class="col-xl-4">
+							<div class="col-xl-4 col-md-4">
 								<div class="card-bg" style="background-image: url(<?= images_folder('nosotros/img_leed.png'); ?>);"></div>
 							</div>
-							<div class="col-xl-8 d-flex align-items-center">
+							<div class="col-xl-8 col-md-8 d-flex align-items-center">
 								<div class="card-body">
 									<h4 class="card-title"><?= localized('servicio_2_title'); ?></h4>
 									<p><?= localized('servicio_2_text'); ?></p>
@@ -101,10 +101,10 @@
 				<div class="col-lg-6" data-aos="fade-up" data-aos-delay="300">
 					<div class="card-item">
 						<div class="row">
-							<div class="col-xl-4">
+							<div class="col-xl-4 col-md-4">
 								<div class="card-bg" style="background-image: url(<?= images_folder('nosotros/img_due.png'); ?>);"></div>
 							</div>
-							<div class="col-xl-8 d-flex align-items-center">
+							<div class="col-xl-8 col-md-8 d-flex align-items-center">
 								<div class="card-body">
 									<h4 class="card-title"><?= localized('servicio_3_title'); ?></h4>
 									<p><?= localized('servicio_3_text'); ?></p>
@@ -117,10 +117,10 @@
 				<div class="col-lg-6" data-aos="fade-up" data-aos-delay="400">
 					<div class="card-item">
 						<div class="row">
-							<div class="col-xl-4">
+							<div class="col-xl-4 col-md-4">
 								<div class="card-bg" style="background-image: url(<?= images_folder('nosotros/img_pre_const.png'); ?>);"></div>
 							</div>
-							<div class="col-xl-8 d-flex align-items-center">
+							<div class="col-xl-8 col-md-8 d-flex align-items-center">
 								<div class="card-body">
 									<h4 class="card-title"><?= localized('servicio_4_title'); ?></h4>
 									<p><?= localized('servicio_4_text'); ?></p>
@@ -149,7 +149,6 @@
 						<div class="icon">
 							<i class="fa-solid fa-shield-halved"></i>
 						</div>
-						<hr>
 						<h3><?= localized('valores_1_title'); ?></h3>
 						<p><?= localized('valores_1_text'); ?></p>
 					</div>
@@ -160,7 +159,6 @@
 						<div class="icon">
 							<i class="fa-solid fa-medal"></i>
 						</div>
-						<hr>
 						<h3><?= localized('valores_2_title'); ?></h3>
 						<p><?= localized('valores_2_text'); ?></p>
 					</div>
@@ -171,7 +169,6 @@
 						<div class="icon">
 							<i class="fa-solid fa-user-check"></i>
 						</div>
-						<hr>
 						<h3><?= localized('valores_3_title'); ?></h3>
 						<p><?= localized('valores_3_text'); ?></p>
 					</div>
@@ -182,7 +179,6 @@
 						<div class="icon">
 							<i class="fa-solid fa-user-group"></i>
 						</div>
-						<hr>
 						<h3><?= localized('valores_4_title'); ?></h3>
 						<p><?= localized('valores_4_text'); ?></p>
 					</div>
@@ -193,7 +189,6 @@
 						<div class="icon">
 							<i class="fa-solid fa-screwdriver-wrench"></i>
 						</div>
-						<hr>
 						<h3><?= localized('valores_5_title'); ?></h3>
 						<p><?= localized('valores_5_text'); ?></p>
 					</div>
@@ -204,7 +199,6 @@
 						<div class="icon">
 							<i class="fa-solid fa-globe-americas"></i>
 						</div>
-						<hr>
 						<h3><?= localized('valores_6_title'); ?></h3>
 						<p><?= localized('valores_6_text'); ?></p>
 					</div>
@@ -267,19 +261,19 @@
 				<!-- Search bar -->
 			</div>
 			<div class="row justify-content-center">
-				<div class="col-lg-2 col-6 text-center mb-3" data-aos="fade-up">
+				<div class="col-lg-2 col-md-3 col-6 text-center mb-3" data-aos="fade-up">
 					<a href="https://www.gruposyasa.com/webpagedemo/es/proyectos/region/1"><img src="<?= images_folder('proyectos/paises/argentina.svg'); ?>" alt="" class="mb-3 w-50"></a>
 					<h5><?= localized('argentina'); ?></h5>
 				</div>
-				<div class="col-lg-2 col-6 text-center mb-3" data-aos="fade-up" data-aos-delay="100">
+				<div class="col-lg-2 col-md-3 col-6 text-center mb-3" data-aos="fade-up" data-aos-delay="100">
 					<a href="https://www.gruposyasa.com/webpagedemo/es/proyectos/region/2"><img src="<?= images_folder('proyectos/paises/mexico.svg'); ?>" alt="" class="mb-3 w-50"></a>
 					<h5><?= localized('mexico'); ?></h5> 
 				</div>
-				<div class="col-lg-2 col-6 text-center mb-3" data-aos="fade-up" data-aos-delay="200">
+				<div class="col-lg-2 col-md-3 col-6 text-center mb-3" data-aos="fade-up" data-aos-delay="200">
 					<a href="https://www.gruposyasa.com/webpagedemo/es/proyectos/region/3"><img src="<?= images_folder('proyectos/paises/panama.svg'); ?>" alt="" class="mb-3 w-50"></a>
 					<h5><?= localized('panama'); ?></h5> 
 				</div>
-				<div class="col-lg-2 col-6 text-center mb-3" data-aos="fade-up" data-aos-delay="300">
+				<div class="col-lg-2 col-md-3 col-6 text-center mb-3" data-aos="fade-up" data-aos-delay="300">
 					<a href="https://www.gruposyasa.com/webpagedemo/es/proyectos/region/4"><img src="<?= images_folder('proyectos/paises/otros.svg'); ?>" alt="" class="mb-3 w-50"></a>
 					<h5><?= localized('otro_pais'); ?></h5> 
 				</div>
@@ -292,7 +286,7 @@
 				</div>
 			</div>
 			<div class="row">
-				<div class="col-lg-4 mb-3">
+				<div class="col-lg- col-md-4 mb-3">
 					<div class="proyectos_por_tipo" data-aos="fade-up">
 						<img src="<?= images_folder('proyectos/tipos/aeropuertos.png'); ?>" class="img-fluid" alt="">
 						<div class="proyectos_por_tipo-info">
@@ -300,7 +294,7 @@
 						</div>
 					</div>
 				</div>
-				<div class="col-lg-4 mb-3">
+				<div class="col-lg-4 col-md-4 mb-3">
 					<div class="proyectos_por_tipo" data-aos="fade-up" data-aos-delay="100">
 						<img src="<?= images_folder('proyectos/tipos/bancarios.png'); ?>" class="img-fluid" alt="">
 						<div class="proyectos_por_tipo-info">
@@ -308,7 +302,7 @@
 						</div>
 					</div>
 				</div>
-				<div class="col-lg-4 mb-3">
+				<div class="col-lg-4 col-md-4 mb-3">
 					<div class="proyectos_por_tipo" data-aos="fade-up" data-aos-delay="200">
 						<img src="<?= images_folder('proyectos/tipos/centros_comerciales.png'); ?>" class="img-fluid" alt="">
 						<div class="proyectos_por_tipo-info">
@@ -316,7 +310,7 @@
 						</div>
 					</div>
 				</div>
-				<div class="col-lg-4 mb-3">
+				<div class="col-lg-4 col-md-4 mb-3">
 					<div class="proyectos_por_tipo" data-aos="fade-up" data-aos-delay="300">
 						<img src="<?= images_folder('proyectos/tipos/hospitales.png'); ?>" class="img-fluid" alt="">
 						<div class="proyectos_por_tipo-info">
@@ -324,7 +318,7 @@
 						</div>
 					</div>
 				</div>
-				<div class="col-lg-4 mb-3">
+				<div class="col-lg-4 col-md-4 mb-3">
 					<div class="proyectos_por_tipo" data-aos="fade-up" data-aos-delay="400">
 						<img src="<?= images_folder('proyectos/tipos/hoteles.png'); ?>" class="img-fluid" alt="">
 						<div class="proyectos_por_tipo-info">
@@ -332,7 +326,7 @@
 						</div>
 					</div>
 				</div>
-				<div class="col-lg-4 mb-3">
+				<div class="col-lg-4 col-md-4 mb-3">
 					<div class="proyectos_por_tipo" data-aos="fade-up" data-aos-delay="500">
 						<img src="<?= images_folder('proyectos/tipos/leed.png'); ?>" class="img-fluid" alt="">
 						<div class="proyectos_por_tipo-info">
@@ -340,7 +334,7 @@
 						</div>
 					</div>
 				</div>
-				<div class="col-lg-4 mb-3">
+				<div class="col-lg-4 col-md-4 mb-3">
 					<div class="proyectos_por_tipo" data-aos="fade-up" data-aos-delay="600">
 						<img src="<?= images_folder('proyectos/tipos/oficinas.png'); ?>" class="img-fluid" alt="">
 						<div class="proyectos_por_tipo-info">
@@ -348,7 +342,7 @@
 						</div>
 					</div>
 				</div>
-				<div class="col-lg-4 mb-3">
+				<div class="col-lg-4 col-md-4 mb-3">
 					<div class="proyectos_por_tipo" data-aos="fade-up" data-aos-delay="700">
 						<img src="<?= images_folder('proyectos/tipos/residenciales.png'); ?>" class="img-fluid" alt="">
 						<div class="proyectos_por_tipo-info">
@@ -356,7 +350,7 @@
 						</div>
 					</div>
 				</div>
-				<div class="col-lg-4 mb-3">
+				<div class="col-lg-4 col-md-4 mb-3">
 					<div class="proyectos_por_tipo" data-aos="fade-up" data-aos-delay="800">
 						<img src="<?= images_folder('proyectos/tipos/otros.png'); ?>" class="img-fluid" alt="">
 						<div class="proyectos_por_tipo-info">
@@ -474,7 +468,7 @@
 				<div class="col-lg-9">
 					<?= form_open_multipart('', ['id' => 'jobs-form']); ?>
 					<div class="row">
-						<div class="col-lg-4">
+						<div class="col-lg-4 col-md-4">
 							<div class="form-group">
 								<label for="nombre"><?= localized('job_opps_first_name'); ?></label>
 								<input type="text" name="nombre" id="nombre" class="form-control" value="<?= set_value('nombre'); ?>" />
@@ -492,7 +486,7 @@
 								<input type="text" name="fechanacimiento" id="fechanacimiento" class="form-control" value="<?= set_value('fechanacimiento'); ?>" />
 							</div>
 						</div>
-						<div class="col-lg-4">
+						<div class="col-lg-4 col-md-4">
 							<div class="form-group">
 								<label for="id_recper_sexo"><?= localized('job_opps_gender'); ?></label>
 								<select class="form-select" id="id_recper_sexo" name="id_recper_sexo">
@@ -524,7 +518,7 @@
 								<input type="text" class="form-control" id="telefono" name="telefono" value="<?= set_value('telefono'); ?>" />
 							</div>
 						</div>
-						<div class="col-lg-4">
+						<div class="col-lg-4 col-md-4">
 							<div class="form-group">
 								<label for="id_recper_areatrabajo"><?= localized('job_opps_job_area'); ?></label>
 								<select class="form-control select2" name="id_recper_areatrabajo" id="id_recper_areatrabajo">
@@ -569,7 +563,7 @@
 						</div>
 					</div>
 					<div class="row">
-						<div class="col-lg-8">
+						<div class="col-lg-8 col-md-6">
 							<div class="form-group">
 								<label>
 								<input type="checkbox" id="dispext" name="dispext" value="1" />
@@ -577,7 +571,7 @@
 								</label>
 							</div>
 						</div>
-						<div class="col-lg-4 d-flex justify-content-end">
+						<div class="col-lg-4 col-md-6 d-flex justify-content-end">
 							<div class="form-group">
 								<button class="btn btn-primary"><?= localized('job_opps_submit'); ?></button>
 							</div>
