@@ -18,7 +18,7 @@
 		<!-- Images gallery + Project Info -->
 		<div class="row justify-content-between">
 			<!-- Gallery -->
-			<div class="col-lg-6">
+			<div class="col-lg-6 order-lg-2 order-md-2 order-2">
 				<div class="owl-theme owl-carousel photos-gallery ">
 					<?php foreach ( $project_media as $media ): ?>
 					<div class="item">
@@ -51,7 +51,7 @@
 				</div>
 			</div>
 			<!-- Info -->
-			<div class="col-lg-5">
+			<div class="col-lg-5 order-lg-1 order-md-1 order-1">
 				<!-- Info -->
 				<div class="project-info-table">
 					<div class="info">
