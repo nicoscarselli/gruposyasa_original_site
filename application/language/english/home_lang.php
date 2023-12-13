@@ -44,10 +44,10 @@ $lang = [
 
     /* VALORES */
     'valores_1_title' => 'Security',
-    'valores_1_text' => 'Committed to maintaining a safe and healthy environment in all our offices and in each of our projects.',
+    'valores_1_text' => 'Our priority is to create a safe and healthy environment in all our offices and in each of our projects.',
 
     'valores_2_title' => 'Quality',
-    'valores_2_text' => 'Our priority is to create a safe and healthy environment in all our offices and in each of our projects.',
+    'valores_2_text' => 'We guarantee the satisfaction of our customers from the beginning, meeting the agreed requirements and constantly improving our processes.',
 
     'valores_3_title' => 'Integrity',
     'valores_3_text' => 'We distinguish ourselves by our integrity in the marketplace and provide an ethical work environment for all our employees.',
