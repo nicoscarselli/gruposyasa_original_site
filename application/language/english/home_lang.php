@@ -13,7 +13,9 @@ $lang = [
 
     /* QUIENES SOMOS */
     'quienes_somos_title' => 'About us',
-    'quienes_somos_text' => 'We are a leading engineering company that manages real estate, industrial and infrastructure projects in Latin America. We offer customized and quality solutions for any type of project, with advanced technology and respect for the past. We use &quot;Construction Management&quot;, where dialogue and integrated organization of all actors is encouraged.',
+    'quienes_somos_text' => 'We are a leading engineering company that manages real estate, industrial and infrastructure projects in Latin America.
+    We offer customized and quality solutions for any type of project, with advanced technology and respect for the past.
+    We use &quot;Construction Management&quot;, where dialogue and integrated organization of all actors is encouraged.',
     /* QUIENES SOMOS */
 
     /* QUE HACEMOS */
