@@ -175,7 +175,7 @@
                     <div class="col-lg-9 d-flex">
                         <div class="p-2">
                             # <span class="image-order-display"><?= $media->order; ?></span>
-                            <button class="btn btn-success" data-image-id="<?= $media->id; ?>" data-type="<?= (is_a($media, Project_video::class) ? 'video' : 'image'); ?>">Bajar</button>
+                            <button class="btn btn-success increase-priority-button" data-image-id="<?= $media->id; ?>" data-type="<?= (is_a($media, Project_video::class) ? 'video' : 'image'); ?>">Bajar</button>
                             <button class="btn btn-success" data-image-id="<?= $media->id; ?>" data-type="<?= (is_a($media, Project_video::class) ? 'video' : 'image'); ?>" style="display: <?= ($media->order > 1) ? 'inline-block' : 'none'; ?>;">Subir</button>
                         </div>
 
@@ -183,12 +183,12 @@
                             <?php if ($main_image): ?>
                                 <h5>Imagen Principal</h5>
                             <?php elseif (is_a($media, Project_image::class)): ?>
-                                <button class="btn btn-secondary" data-image-id="<?= $media->id; ?>">Hacer principal</button>
+                                <button class="btn btn-secondary set-main-image-button" data-image-id="<?= $media->id; ?>">Hacer principal</button>
                             <?php endif; ?>
                         </div>
 
                         <div class="p-2">
-                            <button class="btn btn-danger" data-image-id="<?= $media->id; ?>" data-image-name="<?= $media->file; ?>" data-type="<?= (is_a($media, Project_video::class) ? 'video' : 'image'); ?>">Borrar</button>
+                            <button class="btn btn-danger delete-image-button" data-image-id="<?= $media->id; ?>" data-image-name="<?= $media->file; ?>" data-type="<?= (is_a($media, Project_video::class) ? 'video' : 'image'); ?>">Borrar</button>
                         </div>
                         
                     </div>
